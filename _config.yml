@@ -1,1 +1,3 @@
 baseurl: /src/templates/index.html
+
+theme: jekyll-theme-hacker
