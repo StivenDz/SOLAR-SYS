@@ -11,6 +11,6 @@ jobs:
     environment: 
       name: production
       url: https://stivendz.github.io
-      baseurl: src/templates/
+      source: src/templates/
     steps:
       - name: deploy
