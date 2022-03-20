@@ -1,2 +1,16 @@
-baseurl: src/templates/
-theme: jekyll-theme-hacker
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: https://stivendz.github.io
+      baseurl: src/templates/
+    steps:
+      - name: deploy
