@@ -11,6 +11,7 @@ jobs:
     environment: 
       name: production
       url: https://stivendz.github.io
+      source: src/templates
     steps:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
