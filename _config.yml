@@ -1,2 +1,2 @@
-baseurl: /templates/
+baseurl: src/templates/
 theme: jekyll-theme-hacker
