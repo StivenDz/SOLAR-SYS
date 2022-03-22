@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb{
     height: 100%;
     z-index: var(--backAppear);
     background: #000;
-    animation: backAppear 7s .9s both;
+    animation: backAppear 7s 2s both;
 }
 
 .wrapperIndex{
