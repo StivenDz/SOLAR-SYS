@@ -13,6 +13,7 @@
     --content:900;
     --menu:700;
     --menuList:500;
+    --foot:400;
     --backAppear:200;
     --zwrapper:100
 }
@@ -106,7 +107,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .wrapperMercury1{
-    position: absolute;
+    position:absolute;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -149,7 +150,7 @@ body::-webkit-scrollbar-thumb{
     animation: bright2 7s infinite alternate ease-in-out;
 }
 .wrapperSaturno1{
-    position: absolute;
+    position:absolute;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -965,6 +966,7 @@ body::-webkit-scrollbar-thumb{
     height: 20vh;
     width: 100%;
     position: relative;
+    z-index: var(--foot);
     background: rgb(15,15,15);
     border-radius:50% 50% 0% 100% / 100% 100% 0% 0%;
     border-top: 1px solid #ffffff;
