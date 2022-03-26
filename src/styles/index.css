@@ -69,6 +69,14 @@ body::-webkit-scrollbar-thumb{
 
 
 /*  ALL BACKGROUNDS */
+canvas{
+    position: absolute;
+    width: 100% !important;
+    height: 100vh !important;
+    top:0;
+    left:0;
+    z-index: 10;
+}
 
 .backAppear{
     position: absolute;
@@ -85,6 +93,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 100%;
     z-index: var(--zwrapper);
+    opacity: .5;
 }
 .wrapperEarth1{
     position: absolute;
@@ -371,13 +380,13 @@ body::-webkit-scrollbar-thumb{
     }
 }
 
-.background2{
+/* .background2{
     height: 100vh;
     width: 100%;
     background: #00000088;
     z-index: 101;
     position: absolute;
-}
+} */
 
 .background{
     background: #000
@@ -723,6 +732,28 @@ body::-webkit-scrollbar-thumb{
     color: rgb(0, 114, 255);
     background: transparent;
     outline: 2px solid rgb(0, 114, 255);
+}
+.btn-rev{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 1.7rem;
+    margin-top: 2.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: transparent;
+    margin-left: 10px;
+    color: rgb(0, 114, 255);
+    outline: 2px solid rgb(0, 114, 255);
+    transition: color 1s , background 1s, outline 0s;
+}
+.btn-rev:hover{
+    color: white;
+    background-color: rgb(0, 114, 255);
+    outline: none;
 }
 
 .position-button{
