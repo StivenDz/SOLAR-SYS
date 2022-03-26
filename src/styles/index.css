@@ -1117,7 +1117,7 @@ canvas{
         margin: 0.5rem 0;
     }
 
-    .btn{
+    .btn,.btn-rev{
         padding: 0.5rem 1rem;
         margin-top: 1.7rem;
         font-size: 0.8rem;
