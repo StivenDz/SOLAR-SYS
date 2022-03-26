@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 }
 
 
@@ -20,6 +21,7 @@
 
 
 body {
+    height: 100%;
     min-height: 100vh;
     background: #000000;
     display: flex;
@@ -163,7 +165,24 @@ main{
     opacity: 0;
     transition: opacity 1s;
 }
-.btn:hover{
+.btn2{
+    text-decoration: none;
+    padding: .5rem 1.2rem;
+    margin-top: 2.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(0, 114, 255);
+    color: white;
+    transition: color 1s , background 1s, outline 0s;
+    position: relative;
+    z-index: 700;
+    transition: opacity 1s;
+}
+.btn:hover,.btn2:hover{
     color: rgb(0, 114, 255);
     background: transparent;
     outline: 2px solid rgb(0, 114, 255);
@@ -515,7 +534,7 @@ main{
         height: 100vh !important;
     }
 }
-@media screen and (min-width:1250px) {
+/* @media screen and (min-width:1250px) { */
     .container-fluid{
         display: none;
     }
@@ -543,13 +562,92 @@ main{
     }
 
     .backPro{
-        height: 134vh;
+        /* height: 134vh; */
+        height: 100%;
         width: 100%;
-        background: linear-gradient(to top, #000, transparent);
         position: absolute;
+        z-index: 1400;
+        animation: showPage 3s 2s 1 both;
+    }
+
+    @keyframes showPage {
+        0%{
+            background: #000;
+        }100%{
+            background: #00000000;
+            z-index: 1;
+        }
     }
     p,h2{
         position: relative;
         z-index: 700;
+    }
+
+    .maxZindex{
+        z-index: 1200 !important;
+    }
+    .magicContainer{
+        position: absolute;
+        overflow: hidden;
+        width: 80%;
+        white-space: nowrap;
+        top: 50px;
+        left: 25px;
+        z-index: 1500;
+        height: max-content;
+        color: rgb(211, 211, 211);
+        animation: letterAppear 3s 1 steps(30)
+    }
+    .magic{
+        text-transform: uppercase;
+        font-family: 'poppins', sans-serif;
+        font-weight: 900;
+        animation: textColor 2.5s 5s ease-in-out infinite alternate both;
+        font-size: 3rem;
+        position: relative;
+        animation: textColor 2.5s 2s ease-in-out infinite alternate both;
+    }
+    @keyframes textColor {
+        0%{
+            color: rgb(255, 255, 255);
+        }
+        100%{
+            color: rgba(255, 255, 255, 0);
+        }
+    }
+    @keyframes letterAppear {
+        0% {
+            width:0;
+            white-space: nowrap;
+        }
+    }
+    
+    @keyframes cursor {
+        0%{
+            white-space: nowrap;
+            border-right: 3px solid #ffffff;
+        }
+        50% {
+            white-space: nowrap;
+            border-color: transparent;
+        }
+        100%{
+            white-space: nowrap;
+            border-right: 3px solid #ffffff;
+        }
+    }
+/* } */
+
+@media screen and (max-width:768px){
+    .magic{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:430px){
+    .magic{
+        font-size: 1.6rem;
+    }
+    p{
+        text-align: left;
     }
 }
