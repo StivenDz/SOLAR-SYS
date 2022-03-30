@@ -1,0 +1,330 @@
+/*  STARTING MAIN CONTAINERS CONFIGURATIONS   */
+
+body{
+    overflow-y: scroll;
+    scroll-behavior:smooth;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    width: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(34, 34, 34, 0);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #eeff0000; 
+    border-radius: 5px;
+    display: none;
+}
+
+.body_Index{
+    /* background: url(../images/stars.jpg); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.body_venus, .body_saturno , .body_mercury ,.body_earth,.body_mars,.body_jupiter{
+    height: 100%;
+    background: #000000;
+}
+
+.main_index{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.main_Earth{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.main_Earth2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.webgl{
+    width: 100vw !important;
+    height: 100vh !important;
+    position: relative;
+    pointer-events: none;
+}
+
+
+/*  ALL BACKGROUNDS */
+canvas{
+    position: absolute;
+    width: 100% !important;
+    height: 100vh !important;
+    top:0;
+    left:0;
+    z-index: 10;
+}
+.backAppear{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: $backAppear;
+    background: #000;
+    animation: backAppear 7s 2s both;
+}
+.background{
+    background: #000
+}
+.colorS1{
+    background: none !important;
+}
+
+.colorM1{
+    background: linear-gradient(to right, rgba(54, 43, 4, 0.055),rgba(0, 0, 0, 0.171)) !important;
+    border-top: 1px solid rgba(148, 114, 4, 0) !important;
+    border-left: 1px solid rgba(148, 114, 4, 0) !important;
+}
+.colorM2{
+    background: linear-gradient(to top,rgb(0, 0, 0), rgba(197, 152, 2, 0.021)) !important;
+}
+
+.colorM3{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(117, 92, 8, 0.075)) !important;
+}
+
+.remove{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.89),transparent)!important;
+}
+.wrapper{
+    &Index{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        opacity: .5;
+    }
+    &Earth1{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/Earth2.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright3 7s infinite alternate ease-in-out;
+    }
+    &Earth2{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+    }
+    
+    &Mercury1{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/Mercurio2.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright2 7s infinite alternate ease-in-out;
+    }
+    
+    &Mercury2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/Mercurio.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright2 7s infinite alternate ease-in-out;
+    }
+    &Venus1{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/Venus2.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright2 7s infinite alternate ease-in-out;
+    }
+    &Venus2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/Venus.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright2 7s infinite alternate ease-in-out;
+    }
+    &Saturno1{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/saturno.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        animation: onlyBright 7s infinite alternate ease-in-out;
+    }
+    &Saturno2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/saturno2.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright 7s infinite alternate ease-in-out;
+    }
+    &Marte1{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/marte.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        animation: bright2 7s infinite alternate ease-in-out;
+    }
+    &Marte2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/marte2.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright 7s infinite alternate ease-in-out;
+    }
+    &Jupiter1{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/jupiter.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        animation: bright2 7s infinite alternate ease-in-out;
+    }
+    &Jupiter2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: $zwrapper;
+        background: url(../images/jupiter3.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/onion.png) 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: bright 7s infinite alternate ease-in-out;
+    &Earth1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.404));
+    }
+    
+    &Earth2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../images/Earth3.jpg) 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: bright2 7s infinite alternate ease-in-out;
+    }
+    
+    &Mercury1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000, rgba(148, 114, 4, 0.171));
+    }
+    
+    &Mercury2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0));
+    }
+    
+    &Venus1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000, rgba(148, 114, 4, 0.171));
+    }
+    
+    &Venus2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0));
+    }
+    &Saturno1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000, rgba(6, 4, 148, 0.171));
+    }
+    
+    &Saturno2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0));
+    }
+    &Marte1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000, rgba(6, 4, 148, 0.171));
+    }
+    
+    &Marte2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0));
+    }
+    
+    &Jupiter1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000, rgba(6, 4, 148, 0.171));
+    }
+    
+    &Jupiter2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0));
+        
+    }
+}

@@ -1,0 +1,234 @@
+/*** making responsive all ****/
+
+@media only screen and (max-width: 1085px){
+    .title h1{
+        font-size: 1.8rem;
+    }    
+
+    .title p{
+        width: 100%;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    .btn,.btn-rev {
+        padding: 0.5rem 1rem;
+        margin-top: 1.7rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .main-text{
+        width: 55%;
+    }
+
+    .title{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .main-text{
+        width: 60%;
+    }
+
+    .title h1{
+        color: white;
+    }
+
+    .title p{
+        color: rgb(205, 205, 205);
+    }
+}
+
+@media screen and (max-width: 828px){
+    .aside-flotante{
+        display: none;
+    }
+    
+    .main-text2-nr > div:nth-child(1){
+        display: none;
+    }
+    .main-text2-nr > div:nth-child(2){
+        display: none;
+    }
+    .main-text2-nr > div:nth-child(3){
+        background: linear-gradient(to top, #000,transparent);
+    }
+    .main-text2-r{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 3;
+        border: none;
+        display: flex;
+        position: relative;
+        align-items: center;
+        overflow: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    .main-text2-r section{
+        min-width: 100%;
+        scroll-snap-align: start;
+        position: relative;
+        height: 100%;
+        background: linear-gradient(to bottom,#000,transparent)!important;
+    }
+
+
+    .listInd{
+        padding-left: 20px ;
+    }
+
+    .listInd li{
+        font-size: 18px;
+    }
+
+    .general-c{
+        width:100%;
+        height: 100%;
+        position: relative;
+        border-radius: 15px;
+        padding: 15px;
+        animation: show 2s 4s ease-in-out 1 both;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .general-c .list2{
+        padding: 25px;
+    }
+    .general-c h2{
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem !important;
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media only screen and (max-width: 790px){
+    .overflow,.overflow2{
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        overflow-y: scroll;
+    }
+
+    .title p{
+        color: rgb(248, 248, 248);
+    }
+    
+    .title .second-text-responsive{
+        display: block;
+        margin-top: 20px;
+    }
+    .second-text-main{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .main-text{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:672px){
+    .magic{
+        font-size: 2rem !important;
+    }
+}
+
+@media screen and (max-width:570px){
+    .title .cont-appear h1{
+        font-size: 2rem;
+        animation: none;
+    }
+}
+
+@media screen and (max-width:500px){
+    .lists{
+        padding: 10px;
+    }
+
+    .lists ul{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:469px){
+    .magic{
+        font-size: 1.5rem !important;
+    }
+    .list{
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width:368px){
+    .title .cont-appear h1{
+        text-align: center;
+    }
+
+    .title .cont-appear{
+        animation: none;
+    }
+    .main-text2-r{
+        border-radius: 15px;
+        border-top: 2px solid #0c029b;
+    }
+
+    .mercury-color{
+        border-top: 2px solid rgba(148, 114, 4, 0.699);
+    }
+
+    .listInd li{
+        font-size: 15px;
+    }
+
+    .general-c  p{
+        text-align: left !important;
+    }
+}
+
+@media screen and (max-width:350px){
+    .lists{
+        padding: 5px;
+    }
+
+    .lists ul{
+        padding: 10px;
+    }
+}
+
+@media  screen and (max-width:390px) {
+    .main-text{
+        margin-top: 15px;
+    }
+
+    .title .cont-appear2 h1{
+        text-align: left;
+    }
+
+    .overflow{
+        height: 70vh;
+        box-shadow: 1px 2px 1px 0px rgb(0, 114, 255);
+        border-radius: 5px;
+    }
+    .overflow2{
+        height: 70vh;
+        box-shadow: 1px 2px 1px 0px rgba(148, 114, 4, 0.699);
+        border-radius: 5px;
+    }
+    .overflow::-webkit-scrollbar,.overflow2::-webkit-scrollbar{
+        display: none;
+    }
+
+}

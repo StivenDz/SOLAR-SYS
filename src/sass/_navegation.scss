@@ -1,0 +1,417 @@
+.novisible{
+    animation: hidden 2s 1 both;
+}
+.planets-names{
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    border: 2px solid transparent;
+    width: 313.33333333333334px;
+    height: 243.33333333333334px;
+    z-index: 1300;
+    pointer-events: none;
+
+    & .planets1, & .planets2, & .planets3{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #ffffff;
+        height: 100%;
+        width: 100%;
+    }
+
+    & div{
+        border-radius: 3rem;
+        position: relative;
+        width: 100%;
+        &>span{
+            right: 167px;
+            top: 4px;
+            position: absolute;
+            display: block;
+            transform: rotate(45deg);
+            z-index: -1;
+            width: 27px;
+            height: 27px;
+            border-right: 6.666666666666667px solid rgb(0, 114, 255);
+            border-top: 6.666666666666667px solid rgb(0, 114, 255);
+            border-radius: 3px;
+            transition: border-color 0.3s;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        & p{
+            width: max-content;
+            position: relative;
+            z-index: 5;
+            padding: 0.3rem 1rem;
+            border: none;
+            border-radius: 3rem 20rem 20rem 3rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200;
+            cursor: pointer;
+            text-transform: uppercase;
+            background: linear-gradient(to right ,rgba(0, 115, 255, 0.616),rgb(0, 114, 255)) ;
+            color: rgb(255, 255, 255);
+            transition: background 1s;
+            text-decoration: none;
+
+            & a{
+                width: 100%;
+                height: 100%;
+                position: absolute;z-index: 10;
+                pointer-events: all;
+            }
+        }
+    }
+    & .firstPlanet{
+        position: absolute;
+        padding-left: 10px;
+        &>span{
+            right: 189px;
+        }
+    }
+    & .secondPlanet{
+        padding-left: 85px;
+        position: absolute;
+        top: 90px;
+        &>span{
+            right: 141px;
+            top: 4.2px;
+        }
+    }
+    & .thirdPlanet{
+        padding-left: 170px;
+        position: absolute;
+        bottom: 70px;
+        &>span{
+            right: 58px;
+        }
+    }
+    & .firstPlanet2{
+        position: absolute;
+        padding-left: 38px;
+        &>span{
+            right: 189px;
+        }
+    }
+    & .secondPlanet2{
+        padding-left: 80px;
+        position: absolute;
+        top: 90px;
+        &>span{
+            right: 141px;
+            top: 4.2px;
+        }
+    }
+    & .thirdPlanet2{
+        padding-left: 150px;
+        position: absolute;
+        bottom: 70px;
+        &>span{
+            right: 55px;
+        }
+    }
+    & .firstPlanet3{
+        position: absolute;
+        padding-left: 33px;
+        &>span{
+            right: 189px;
+        }
+    }
+    
+    & .secondPlanet3{
+        padding-left: 65px;
+        position: absolute;
+        top: 90px;
+        &>span{
+            right: 141px;
+            top: 4.2px;
+        }
+    }
+    & .thirdPlanet3{
+        padding-left: 160px;
+        position: absolute;
+        bottom: 70px;
+        &>span{
+            right: 58px;
+        }
+    }
+    
+    & .planets2 , & .planets3{
+        display: none;
+    }
+}
+.icon {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.hamburger {
+    content: ' ';
+    position: relative;
+    width: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: all 0.333333333333333s ease;
+    transform: rotate(90deg);
+    &:after,
+    &:before {
+        content: ' ';
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        transform: translateX(-50%);
+        transition-property: top, bottom, transform;
+        transition-duration: 1s, 1s, 0.25s;
+    }
+    &:after {
+        top: -8px;
+    }
+    &:before {
+        bottom: -8px;
+    }
+}
+.menu {
+    pointer-events: none;
+}
+.menu--circle {
+    position: fixed;
+    z-index: $zinav;
+    width: 243.33333333333334px;
+    height: 243.33333333333334px;
+    background-color: #39233800;
+    overflow: hidden;
+    right: 0px;
+    transform:rotate(90deg);
+}
+.menu__active {
+    position: relative;
+}
+.menu__toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index: $menu;
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    transition: transform 1.3s;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.menu__listings {
+    z-index: $menuList;
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    transform: scale(0.1) rotate(150deg);
+    transition: transform 1s;
+}
+.menu__arrow {
+    visibility: hidden;
+    position: absolute;
+    & input[type="radio"] {
+        position: fixed;
+        top: -99999px;
+        left: -99999px;
+    }
+    & ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    &--top {
+        top: 0.5em;
+        left: 220px;
+    }
+    &--top .arrow {
+        transform: rotate(-45deg);
+    }
+    &--left {
+        top: 220px;
+        left: 0.5em;
+        & .arrow {
+            transform: rotate(-135deg);
+        }
+    }
+}
+.arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 6.666666666666667px solid #fff;
+    border-top: 6.666666666666667px solid #fff;
+    border-radius: 3px;
+    transition: border-color 0.3s;
+    cursor: pointer;
+    pointer-events: auto;
+    &:hover {
+        border-color: #0c029b;
+        transition: border-color 0.3s;
+    }
+}
+.circle {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(108deg);
+    overflow: hidden;
+    list-style: none;
+    & li {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 50%;
+        transform-origin: 0 100%;
+        & .placeholder {
+            position: absolute;
+            left: -100%;
+            padding-top: 1.5em;
+            width: 200%;
+            height: 200%;
+            text-align: center;
+            transform: skewY(54deg) rotate(18deg);
+
+            & .upside {
+                transform: rotate(180deg);
+            }
+            & a {
+                text-decoration: none;
+                pointer-events: auto;
+            }
+            & button {
+                pointer-events: auto;
+            }
+            & .button {
+                font-size: 2.3em;
+                background-color: transparent;
+                border: none;
+                color: #000000;
+                cursor: pointer;
+            }
+        }
+        &:nth-child(1) {
+            transform: rotate(0deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(2) {
+            transform: rotate(36deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(3) {
+            transform: rotate(72deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(4) {
+            transform: rotate(108deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(5) {
+            transform: rotate(144deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(6) {
+            transform: rotate(180deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(7) {
+            transform: rotate(216deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(8) {
+            transform: rotate(252deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(9) {
+            transform: rotate(288deg) skewY(-54deg);
+            background-color: #fff;
+        }
+        &:nth-child(10) {
+            transform: rotate(324deg) skewY(-54deg);
+            background-color: #fff;
+        }
+    }
+}
+#menu__active {
+    position: fixed;
+    top: -99999px;
+    left: -99999px;
+
+    &:checked ~ label{
+        & .menu__listings {
+            transform: rotate(10deg) scale(1);
+            transition: transform 1s;
+        }
+        & .menu__toggle {
+            background-color: #000000;
+            transition: all 1s;
+        }
+        & .hamburger {
+            border-color: transparent;
+            transition: border-color 0.333333333333333s;
+        }
+        & .hamburger:after {
+            top: -2px;
+            border-color: #fff;
+            transform: translateX(-50%) rotate(45deg);
+            transition-property: top, transform;
+            transition-duration: 0.25s, 1s;
+        }
+        & .hamburger:before {
+            bottom: -2px;
+            border-color: #fff;
+            transform: translateX(-50%) rotate(-45deg);
+            transition-property: bottom, transform;
+            transition-duration: 0.25s, 1s;
+        }
+        & .button:hover {
+            color: #0c029b;
+        }
+        & .menu__arrow {
+            visibility: visible;
+            transition: all 1s 1.111111111111111s;
+            &--top label {
+                display: none;
+                &[for="degree--up-0"] {
+                    display: block;
+                }
+            }
+        }
+        & #degree--up-0:checked {
+            &~ .menu__listings {
+                transform: rotate(116deg);
+            }
+            &~ .menu__arrow--top label {
+                display: none;
+                &[for="degree--up-1"] {
+                    display: block;
+                }
+            }
+        }
+        & #degree--up-1:checked{
+            & .menu__listings {
+                transform: rotate(224deg);
+                & ~ .menu__arrow--top label {
+                    display: none;
+                    &[for="degree--up-2"] {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

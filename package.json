@@ -19,6 +19,9 @@
   ],
   "author": "Stiven Diaz",
   "license": "ISC",
+  "dependencies": {
+    "three": "^0.127.0"
+  },
   "bugs": {
     "url": "https://github.com/StivenDz/SOLAR-SYS/issues"
   },
