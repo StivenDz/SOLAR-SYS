@@ -1,4 +1,5 @@
 let scene, camera, renderer, stars, starGeo,star;
+const starsContainer = document.getElementById('stars');
 
 function init() {
 
@@ -10,7 +11,7 @@ function init() {
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    document.body.appendChild(renderer.domElement).classList.add('stars');
 
     starGeo = new THREE.Geometry();
     for(let i=0;i<6000;i++) {

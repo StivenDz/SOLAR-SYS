@@ -1,6 +1,9 @@
 .novisible{
     animation: hidden 2s 1 both;
 }
+.animation{
+    animation: showNames 2.5s 1 both;
+}
 .planets-names{
     position: fixed;
     top: 0;
@@ -232,9 +235,9 @@
     &--top {
         top: 0.5em;
         left: 220px;
-    }
-    &--top .arrow {
-        transform: rotate(-45deg);
+        & .arrow {
+            transform: rotate(-45deg);
+        }
     }
     &--left {
         top: 220px;
@@ -392,24 +395,24 @@
             }
         }
         & #degree--up-0:checked {
-            &~ .menu__listings {
+            & ~ .menu__listings {
                 transform: rotate(116deg);
             }
-            &~ .menu__arrow--top label {
+            & ~ .menu__arrow--top label {
                 display: none;
-                &[for="degree--up-1"] {
-                    display: block;
-                }
+            }
+            & ~ .menu__arrow--top label[for="degree--up-1"] {
+                display: block;
             }
         }
         & #degree--up-1:checked{
-            & .menu__listings {
+            & ~ .menu__listings {
                 transform: rotate(224deg);
                 & ~ .menu__arrow--top label {
                     display: none;
-                    &[for="degree--up-2"] {
-                        display: block;
-                    }
+                }
+                & ~ .menu__arrow--top label[for="degree--up-2"] {
+                    display: block;
                 }
             }
         }

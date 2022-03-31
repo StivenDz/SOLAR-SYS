@@ -34,6 +34,19 @@
         -webkit-filter: brightness(1.5);
     }
 }
+@keyframes bright3Earth {
+    0%{
+        background-position: top;
+        filter: brightness(3.5);
+        -webkit-filter: brightness(3.5);
+    }50%{
+        filter: brightness(4);
+        -webkit-filter: brightness(4);
+    }100%{
+        filter: brightness(3.5);
+        -webkit-filter: brightness(3.5);
+    }
+}
 @keyframes bright2 {
     0%{
         background-position: top;

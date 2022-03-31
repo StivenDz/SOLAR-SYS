@@ -684,6 +684,10 @@ canvas{
     transform: translateY(-50%);
 }
 
+.main-text::-webkit-scrollbar{
+    display: none;
+}
+
 .title{
     color: rgb(231, 231, 231);
     padding: 0 2rem;

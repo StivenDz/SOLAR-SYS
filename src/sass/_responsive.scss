@@ -109,6 +109,9 @@
         font-size: 1.5rem !important;
         color: rgb(255, 255, 255);
     }
+    .second-text-main{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 790px){
@@ -118,6 +121,12 @@
         transform: translate(-50%, -50%);
         text-align: center;
         overflow-y: scroll;
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .title p{
@@ -172,6 +181,43 @@
 
 }
 
+@media screen and (max-width:435px){
+    .main-text .title p{
+        width: 100%;
+    }
+}
+
+@media  screen and (max-width:395px) {
+    .main-text{
+        margin-top: 20px;
+    }
+}
+
+@media  screen and (max-width:390px) {
+    .main-text{
+        margin-top: 15px;
+    }
+
+    .overflow{
+        height: 80vh;
+        box-shadow: 1px 4px 7px 0px rgba(255, 255, 255, 0.432);
+        border-radius: 5px;
+        transition: box-shadow 1s;
+        &:hover{
+            box-shadow: 1px 4px 7px 0px rgba(255, 255, 255, 0.904);
+        }
+    }
+    .overflow2{
+        height: 70vh;
+        box-shadow: 1px 2px 1px 0px rgba(148, 114, 4, 0.699);
+        border-radius: 5px;
+    }
+    .overflow::-webkit-scrollbar,.overflow2::-webkit-scrollbar{
+        display: none;
+    }
+
+}
+
 @media screen and (max-width:368px){
     .title .cont-appear h1{
         text-align: center;
@@ -208,27 +254,3 @@
     }
 }
 
-@media  screen and (max-width:390px) {
-    .main-text{
-        margin-top: 15px;
-    }
-
-    .title .cont-appear2 h1{
-        text-align: left;
-    }
-
-    .overflow{
-        height: 70vh;
-        box-shadow: 1px 2px 1px 0px rgb(0, 114, 255);
-        border-radius: 5px;
-    }
-    .overflow2{
-        height: 70vh;
-        box-shadow: 1px 2px 1px 0px rgba(148, 114, 4, 0.699);
-        border-radius: 5px;
-    }
-    .overflow::-webkit-scrollbar,.overflow2::-webkit-scrollbar{
-        display: none;
-    }
-
-}

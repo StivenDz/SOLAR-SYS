@@ -10,12 +10,23 @@ const linksNames3 = document.querySelector('.planets3');
 
 const contPlanets = document.querySelector('.planets-names');
 
-menu.toggleAttribute('checked');
-menu.addEventListener('click',(e) =>{
-    contPlanets.classList.toggle('novisible');
+if(window.innerWidth <= 590){
+    menu.setAttribute('ckeched',false);
     contPlanets.classList.toggle('animation');
-    contPlanets.classList.toggle('animation_reverse');
-});
+    menu.addEventListener('click',(e) =>{
+        contPlanets.classList.toggle('novisible');
+        contPlanets.classList.toggle('animation');
+        contPlanets.classList.toggle('animation_reverse');
+    });
+}else{
+    menu.toggleAttribute('checked');
+    menu.addEventListener('click',(e) =>{
+        contPlanets.classList.toggle('novisible');
+        contPlanets.classList.toggle('animation');
+        contPlanets.classList.toggle('animation_reverse');
+    });
+}
+
 
 arrow1.addEventListener('click',(e)=>{
     changeLinksNames('none','flex','none');
