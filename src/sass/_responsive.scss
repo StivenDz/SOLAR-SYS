@@ -254,3 +254,29 @@
     }
 }
 
+// planets-bootsrtap responsive
+
+@media screen and (max-width:768px){
+    .magic{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:430px){
+    .magic{
+        font-size: 1.6rem;
+    }
+    p{
+        text-align: left;
+    }
+}
+@media screen and (max-width:402px){
+    .magic{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width:330px){
+    .magic{
+        font-size: 1.1rem;
+    }
+}
+

@@ -491,7 +491,11 @@ body::-webkit-scrollbar-thumb {
 .main_Earth2 {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+  background: url(../images/Earth3.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .earth-Animation {
   position: relative;
@@ -504,13 +508,14 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none; }
 
 /*  ALL BACKGROUNDS */
-body canvas {
-  position: absolute;
+.stars {
+  position: fixed;
   width: 100% !important;
   height: 100vh !important;
   top: 0;
   left: 0;
-  z-index: 10; }
+  z-index: 10;
+  opacity: .5; }
 
 .backAppear {
   position: absolute;
@@ -540,6 +545,9 @@ body canvas {
 .remove {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.89), transparent) !important; }
 
+.whitoutBack {
+  background: none !important; }
+
 .wrapperIndex {
   position: absolute;
   text-align: center;
@@ -554,10 +562,8 @@ body canvas {
   width: 100%;
   height: 100vh;
   z-index: 100;
-  background: url(../images/Earth2.jpg) 50% 50%;
   background-size: cover;
-  background-repeat: no-repeat;
-  animation: bright3Earth 7s infinite alternate ease-in-out; }
+  background-repeat: no-repeat; }
 
 .wrapperEarth2 {
   position: absolute;
@@ -686,7 +692,7 @@ body canvas {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.404)); }
+    background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)); }
   .bgEarthx {
     position: absolute;
     width: 100%;
@@ -696,8 +702,9 @@ body canvas {
   .bgEarth1x {
     position: absolute;
     width: 100%;
-    height: 100%;
-    z-index: 11;
+    height: 40%;
+    bottom: 0;
+    z-index: 150;
     background: linear-gradient(to top, #000, rgba(0, 0, 0, 0)); }
   .bgEarth2 {
     position: absolute;
@@ -920,12 +927,6 @@ body canvas {
   font-size: 1.2rem;
   color: white; }
 
-.next {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 40px; }
-
 .btn-sections {
   position: absolute;
   top: 50%;
@@ -983,11 +984,19 @@ body canvas {
   .position-button i {
     font-size: 20px; }
 
+.next {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  z-index: 1200; }
+
 /* FOOTER */
 .footer-Earth {
   height: 20vh;
   width: 100%;
   position: relative;
+  z-index: 180;
   background: #0f0f0f;
   border-radius: 50% 50% 0% 100% / 100% 100% 0% 0%;
   border-top: 1px solid #ffffff; }
@@ -1226,3 +1235,21 @@ body canvas {
     padding: 5px; }
   .lists ul {
     padding: 10px; } }
+
+@media screen and (max-width: 768px) {
+  .magic {
+    font-size: 2rem; } }
+
+@media screen and (max-width: 430px) {
+  .magic {
+    font-size: 1.6rem; }
+  p {
+    text-align: left; } }
+
+@media screen and (max-width: 402px) {
+  .magic {
+    font-size: 1.3rem; } }
+
+@media screen and (max-width: 330px) {
+  .magic {
+    font-size: 1.1rem; } }

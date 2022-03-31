@@ -46,6 +46,10 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 100%;
     position: relative;
+    background: url(../images/Earth3.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .earth-Animation{
@@ -62,13 +66,14 @@ body::-webkit-scrollbar-thumb{
 
 /*  ALL BACKGROUNDS */
 
-body canvas{
-    position: absolute;
+.stars{
+    position: fixed;
     width: 100% !important;
     height: 100vh !important;
     top:0;
     left:0;
     z-index: 10;
+    opacity: .5;
 }
 
 .backAppear{
@@ -102,6 +107,10 @@ body canvas{
 .remove{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.89),transparent)!important;
 }
+
+.whitoutBack{
+    background: none !important;
+}
 .wrapper{
     &Index{
         position: absolute;
@@ -117,10 +126,10 @@ body canvas{
         width: 100%;
         height: 100vh;
         z-index: $zwrapper;
-        background: url(../images/Earth2.jpg) 50% 50%;
+        // background: url(../images/Earth3.jpg) 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
-        animation: bright3Earth 7s infinite alternate ease-in-out;
+        // animation: bright3Earth 7s infinite alternate ease-in-out;
     }
     &Earth2{
         position: absolute;
@@ -252,7 +261,7 @@ body canvas{
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.404));
+        background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
     }
     &Earthx{
         position: absolute;
@@ -265,8 +274,9 @@ body canvas{
     &Earth1x{
         position: absolute;
         width: 100%;
-        height: 100%;
-        z-index: 11;
+        height: 40%;
+        bottom: 0;
+        z-index: 150;
         background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
     }
     
