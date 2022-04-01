@@ -142,6 +142,12 @@
     }
 }
 
+@media screen and (max-width:768px){
+    .magic{
+        font-size: 2rem;
+    }
+}
+
 @media screen and (max-width: 700px){
     .main-text{
         width: 100%;
@@ -184,6 +190,19 @@
 @media screen and (max-width:435px){
     .main-text .title p{
         width: 100%;
+    }
+}
+@media screen and (max-width:430px){
+    .magic{
+        font-size: 1.6rem;
+    }
+    .p-planets{
+        text-align: left;
+    }
+}
+@media screen and (max-width:402px){
+    .magic{
+        font-size: 1.3rem;
     }
 }
 
@@ -251,27 +270,6 @@
 
     .lists ul{
         padding: 10px;
-    }
-}
-
-// planets-bootsrtap responsive
-
-@media screen and (max-width:768px){
-    .magic{
-        font-size: 2rem;
-    }
-}
-@media screen and (max-width:430px){
-    .magic{
-        font-size: 1.6rem;
-    }
-    p{
-        text-align: left;
-    }
-}
-@media screen and (max-width:402px){
-    .magic{
-        font-size: 1.3rem;
     }
 }
 @media screen and (max-width:330px){

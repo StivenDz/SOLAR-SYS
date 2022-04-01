@@ -125,3 +125,12 @@
         border-right: 3px solid #ffffff;
     }
 }
+
+@keyframes showPage {
+    0%{
+        background: #000;
+    }100%{
+        background: #00000000;
+        z-index: 1;
+    }
+}

@@ -186,14 +186,46 @@
     color: rgb(255, 255, 255);
 }
 
-.btn-sections{
+// planets
+.carousel, .carousel-inner, .carousel-item{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.carousel-item img{
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.p-planets,.h2-planetsName{
+    position: relative;
+    z-index: 700;
+}
+
+.maxZindex{
+    z-index: 1200 !important;
+}
+.magicContainer{
     position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%) rotate(45deg);
-    height: 15px;
-    width: 15px;
-    border-top: 5px solid #fff;
-    border-right: 5px solid #fff;
+    overflow: hidden;
+    width: 80%;
+    white-space: nowrap;
+    top: 50px;
+    left: 25px;
+    z-index: 1500;
+    height: max-content;
+    color: rgb(211, 211, 211);
+    animation: letterAppear 3s 1 steps(30)
+}
+.magic{
+    text-transform: uppercase;
+    font-family: 'poppins', sans-serif;
+    font-weight: 900;
+    animation: textColor 2.5s 5s ease-in-out infinite alternate both;
+    font-size: 3rem;
+    position: relative;
+    animation: textColor 2.5s 2s ease-in-out infinite alternate;
 }
 

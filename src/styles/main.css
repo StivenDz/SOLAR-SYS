@@ -109,6 +109,13 @@
     white-space: nowrap;
     border-right: 3px solid #ffffff; } }
 
+@keyframes showPage {
+  0% {
+    background: #000; }
+  100% {
+    background: #00000000;
+    z-index: 1; } }
+
 .novisible {
   animation: hidden 2s 1 both; }
 
@@ -463,6 +470,26 @@ body::-webkit-scrollbar {
   width: 10px;
   box-shadow: 0px 0px 5px 0px rgba(34, 34, 34, 0); }
 
+.full-screen {
+  display: block;
+  height: 100vh;
+  width: 100%; }
+
+.body_Planets {
+  padding: 0;
+  background: #000; }
+
+.body_Planets {
+  height: 100%;
+  min-height: 100vh;
+  background: #000000; }
+
+.body_Planets::-webkit-scrollbar {
+  display: none; }
+
+.main_Planets {
+  margin-bottom: 100px; }
+
 body::-webkit-scrollbar-thumb {
   background-color: #eeff0000;
   border-radius: 5px;
@@ -524,6 +551,42 @@ body::-webkit-scrollbar-thumb {
   z-index: 200;
   background: #000;
   animation: backAppear 7s 2s both; }
+
+.back {
+  border-radius: 6px;
+  position: absolute;
+  z-index: 400;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.801), transparent); }
+
+.back3 {
+  border-radius: 6px;
+  position: absolute;
+  z-index: 400;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black, transparent); }
+
+.back2 {
+  border-radius: 6px;
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.185)); }
+
+.backPro {
+  /* height: 134vh; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1400;
+  animation: showPage 3s 2s 1 both;
+  pointer-events: none; }
 
 .background {
   background: #000; }
@@ -927,15 +990,42 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.2rem;
   color: white; }
 
-.btn-sections {
+.carousel, .carousel-inner, .carousel-item {
+  height: 100% !important;
+  width: 100% !important; }
+
+.carousel-item img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important; }
+
+.p-planets, .h2-planetsName {
+  position: relative;
+  z-index: 700; }
+
+.maxZindex {
+  z-index: 1200 !important; }
+
+.magicContainer {
   position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%) rotate(45deg);
-  height: 15px;
-  width: 15px;
-  border-top: 5px solid #fff;
-  border-right: 5px solid #fff; }
+  overflow: hidden;
+  width: 80%;
+  white-space: nowrap;
+  top: 50px;
+  left: 25px;
+  z-index: 1500;
+  height: max-content;
+  color: lightgray;
+  animation: letterAppear 3s 1 steps(30); }
+
+.magic {
+  text-transform: uppercase;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  animation: textColor 2.5s 5s ease-in-out infinite alternate both;
+  font-size: 3rem;
+  position: relative;
+  animation: textColor 2.5s 2s ease-in-out infinite alternate; }
 
 .btn {
   display: inline-block;
@@ -990,6 +1080,83 @@ body::-webkit-scrollbar-thumb {
   transform: translateX(-50%);
   margin-bottom: 40px;
   z-index: 1200; }
+
+.btn-sections {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%) rotate(45deg);
+  height: 15px;
+  width: 15px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff; }
+
+.position-button-planets {
+  position: fixed;
+  z-index: 1300;
+  padding: .5em 1rem;
+  right: 30px;
+  top: 0px;
+  text-align: center; }
+
+.position-button-planets i {
+  font-size: 22px;
+  transform: rotate(180deg); }
+
+.btnplanetsBack {
+  text-decoration: none;
+  border: none;
+  margin-top: 8px;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #0072ff;
+  color: white;
+  transition: color 1s , background 1s, outline 0s; }
+
+.btnplanets {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 2.5rem;
+  border: none;
+  border-radius: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #0072ff;
+  color: white;
+  transition: color 1s , background 1s, outline 0s;
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, -10%);
+  opacity: 0;
+  transition: opacity 1s; }
+
+.btnplanets2 {
+  text-decoration: none;
+  padding: .5rem 1.2rem;
+  margin-top: 2.5rem;
+  border: none;
+  border-radius: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #0072ff;
+  color: white;
+  transition: color 1s , background 1s, outline 0s;
+  position: relative;
+  z-index: 700;
+  transition: opacity 1s; }
+
+.btnplanets:hover, .btnplanets2:hover, .btnplanetsBack:hover {
+  color: #0072ff;
+  background: transparent;
+  outline: 2px solid #0072ff; }
 
 /* FOOTER */
 .footer-Earth {
@@ -1064,7 +1231,7 @@ body::-webkit-scrollbar-thumb {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
       opacity: 0;
       pointer-events: none;
-      transition: all 0.35 cubic-bezier e 0.68, -0.55, 9.265, 1.55; }
+      transition: all 0.35 cubic-bezier 0.68, -0.55, 9.265, 1.55; }
 
 /*** making responsive all ****/
 @media only screen and (max-width: 1085px) {
@@ -1165,6 +1332,10 @@ body::-webkit-scrollbar-thumb {
   .second-text-main {
     display: none; } }
 
+@media screen and (max-width: 768px) {
+  .magic {
+    font-size: 2rem; } }
+
 @media screen and (max-width: 700px) {
   .main-text {
     width: 100%; } }
@@ -1193,6 +1364,16 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 435px) {
   .main-text .title p {
     width: 100%; } }
+
+@media screen and (max-width: 430px) {
+  .magic {
+    font-size: 1.6rem; }
+  .p-planets {
+    text-align: left; } }
+
+@media screen and (max-width: 402px) {
+  .magic {
+    font-size: 1.3rem; } }
 
 @media screen and (max-width: 395px) {
   .main-text {
@@ -1235,20 +1416,6 @@ body::-webkit-scrollbar-thumb {
     padding: 5px; }
   .lists ul {
     padding: 10px; } }
-
-@media screen and (max-width: 768px) {
-  .magic {
-    font-size: 2rem; } }
-
-@media screen and (max-width: 430px) {
-  .magic {
-    font-size: 1.6rem; }
-  p {
-    text-align: left; } }
-
-@media screen and (max-width: 402px) {
-  .magic {
-    font-size: 1.3rem; } }
 
 @media screen and (max-width: 330px) {
   .magic {
