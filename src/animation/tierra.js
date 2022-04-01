@@ -1,5 +1,5 @@
-import * as THREE from '/node_modules/three/build/three.module.js';
-import { OrbitControls } from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
+import * as THREE from './three.module.js';
+import { OrbitControls } from './OrbitControls.js';
 // import Stats from '/node_modules/three/examples/jsm/libs/stats.module.js';
 
 // global variables
