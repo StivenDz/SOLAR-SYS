@@ -567,7 +567,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   z-index: 400;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(to top, black, transparent); }
 
 .back2 {
@@ -580,7 +580,6 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(to top, black, rgba(0, 0, 0, 0.185)); }
 
 .backPro {
-  /* height: 134vh; */
   height: 100%;
   width: 100%;
   position: absolute;
@@ -1027,6 +1026,9 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   animation: textColor 2.5s 2s ease-in-out infinite alternate; }
 
+.br-index-res {
+  display: none; }
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -1409,7 +1411,11 @@ body::-webkit-scrollbar-thumb {
   .listInd li {
     font-size: 15px; }
   .general-c p {
-    text-align: left !important; } }
+    text-align: left !important; }
+  .br-index-res {
+    display: block; }
+  .main-text .title {
+    padding: 0 20px; } }
 
 @media screen and (max-width: 350px) {
   .lists {
