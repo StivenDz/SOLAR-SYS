@@ -1359,9 +1359,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1.5rem !important;
-    color: white; }
-  .second-text-main {
-    width: 80%; } }
+    color: white; } }
 
 @media only screen and (max-width: 790px) {
   .overflow, .overflow2 {
