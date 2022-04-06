@@ -3,90 +3,88 @@
 body{
     overflow-y: scroll;
     scroll-behavior:smooth;
+    &::-webkit-scrollbar{
+        display: none;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        width: 10px;
+        box-shadow: 0px 0px 5px 0px rgba(34, 34, 34, 0);
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: #eeff0000; 
+        border-radius: 5px;
+        display: none;
+    }
 }
 
-body::-webkit-scrollbar{
-    display: none;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 5px;
-    width: 10px;
-    box-shadow: 0px 0px 5px 0px rgba(34, 34, 34, 0);
-}
 .full-screen{
     display: block;
     height: 100vh;
     width: 100%;
 }
 
-.body_Planets{
-    padding: 0;
-    background: #000;
+
+.body_{
+    &Planets {
+        padding: 0;
+        height: 100%;
+        min-height: 100vh;
+        background: #000000;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    &Index{
+        /* background: url(../images/stars.jpg); */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &venus, &saturno , &mercury ,&earth,&mars,&jupiter{
+        height: 100%;
+        background: #000000;
+    }
 }
 
-.body_Planets {
-    height: 100%;
-    min-height: 100vh;
-    background: #000000;
+.main_{
+    &Planets{
+        margin-bottom: 100px;
+    }
+    &index{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    
+    &Earth{
+        width: 100%;
+        height: 100vh;
+        min-height: 515px;
+        position: relative;
+    }
+    &Earth2{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: url(../images/Earth3.jpg);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
-.body_Planets::-webkit-scrollbar{
-    display: none;
-}
-
-.main_Planets{
-    margin-bottom: 100px;
-}
-
-body::-webkit-scrollbar-thumb{
-    background-color: #eeff0000; 
-    border-radius: 5px;
-    display: none;
-}
-
-.body_Index{
-    /* background: url(../images/stars.jpg); */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.body_venus, .body_saturno , .body_mercury ,.body_earth,.body_mars,.body_jupiter{
-    height: 100%;
-    background: #000000;
-}
-
-.main_index{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.main_Earth{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-.main_Earth2{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: url(../images/Earth3.jpg);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .earth-Animation{
     position: relative;
     z-index: 100;
+    & .webgl{
+        width: 100vw !important;
+        height: 100vh !important;
+        position: relative;
+        pointer-events: none;
+    }
 }
 
-.earth-Animation .webgl{
-    width: 100vw !important;
-    height: 100vh !important;
-    position: relative;
-    pointer-events: none;
-}
 
 /*  ALL BACKGROUNDS */
 
@@ -100,67 +98,79 @@ body::-webkit-scrollbar-thumb{
     opacity: .5;
 }
 
-.backAppear{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: $backAppear;
-    background: #000;
-    animation: backAppear 7s 2s both;
-}
 .back{
-    border-radius: 6px;
-    position: absolute;
-    z-index: 400;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.801),transparent);
-}
-.back3{
-    border-radius: 6px;
-    position: absolute;
-    z-index: 400;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, transparent,rgb(0, 0, 0));
-}
-.back2{
-    border-radius: 6px;
-    position: absolute;
-    width: 101%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgb(0, 0, 0),rgba(0, 0, 0, 0.185));
-}
-.backPro{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 1400;
-    animation: showPage 3s 2s 1 both;
-    pointer-events: none;
-}
-.background{
-    background: #000
-}
-.colorS1{
-    background: none !important;
+    &Appear{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: $backAppear;
+        background: #000;
+        animation: backAppear 7s 2s both;
+    }
+    &AppearReset{
+        animation: none;
+    }
+    &AppearRefresh{
+        animation: backAppear 3s 1 both;
+    }
+    &{
+        border-radius: 6px;
+        position: absolute;
+        z-index: 400;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.801),transparent);
+    }
+    &3{
+        border-radius: 6px;
+        position: absolute;
+        z-index: 400;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, transparent,rgb(0, 0, 0));
+    }
+    &2{
+        border-radius: 6px;
+        position: absolute;
+        width: 101%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgb(0, 0, 0),rgba(0, 0, 0, 0.185));
+    }
+    &Pro{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1400;
+        animation: showPage 3s 2s 1 both;
+        pointer-events: none;
+    }
+    &ground{
+        background: #000
+    }
 }
 
-.colorM1{
-    background: linear-gradient(to right, rgba(54, 43, 4, 0.055),rgba(0, 0, 0, 0.171)) !important;
-    border-top: 1px solid rgba(148, 114, 4, 0) !important;
-    border-left: 1px solid rgba(148, 114, 4, 0) !important;
-}
-.colorM2{
-    background: linear-gradient(to top,rgb(0, 0, 0), rgba(197, 152, 2, 0.021)) !important;
-}
 
-.colorM3{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(117, 92, 8, 0.075)) !important;
+.color{
+    &S1{
+        background: none !important;
+    }
+    
+    &M1{
+        background: linear-gradient(to right, rgba(54, 43, 4, 0.055),rgba(0, 0, 0, 0.171)) !important;
+        border-top: 1px solid rgba(148, 114, 4, 0) !important;
+        border-left: 1px solid rgba(148, 114, 4, 0) !important;
+    }
+    &M2{
+        background: linear-gradient(to top,rgb(0, 0, 0), rgba(197, 152, 2, 0.021)) !important;
+    }
+    
+    &M3{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(117, 92, 8, 0.075)) !important;
+    }
 }
 
 .remove{

@@ -47,27 +47,6 @@
     }
     
 }
-
-.second-text-responsive{
-    display: none;
-}
-
-.second-text-main{
-    width: 60%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: $content;
-    color: #fff;
-    text-align: justify;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: rgb(255, 255, 255);
-    margin: 1rem 0;
-    animation: show 2s 2s ease-in-out 1 both;
-}
-
 .cont-appear2 h2{
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
@@ -76,59 +55,95 @@
     color: rgb(255, 255, 255);
 }
 
-.main-text2-r{
-    display: none;
-}
-.main-text2-nr{
-    position: relative;
-    height: 150vh;
-    width: 100vw;
-    z-index: $content;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: linear-gradient(to bottom, #000,transparent);
-    grid-template-rows: repeat(6,minmax(50px, 25vh));
-}
-
-.main-text2-nr div{
-    position: relative;
-}
-
-.main-text2-nr div p{
-    text-align: justify;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: rgb(236, 236, 236);
+.second-text{
+    &-responsive{
+        display: none;
+    }
+    
+    &-main{
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: $content;
+        color: #fff;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+        margin: 1rem 0;
+        animation: show 2s 2s ease-in-out 1 both;
+    }
 }
 
-.main-text2-nr > div:nth-child(1){
-   justify-self: flex-start;
-   background: linear-gradient(to right, rgba(15, 39, 4, 0.349),rgba(0, 0, 0, 0));
-    border-radius: 15px;
-    padding: 15px;
-    grid-column: 1/ span 1;
-    grid-row: 1/ span 3;
-    align-self: center;
-}
-.main-text2-nr > div:nth-child(2){
-   justify-self: flex-end;
-   grid-column: 2/ span 1;
-    grid-row: 2/ span 2;
-}
-.main-text2-nr > div:nth-child(3){
-   justify-self: flex-start;
-   grid-column: 1/ span 2;
-    grid-row: 4/ span 3;
-    background: linear-gradient(to top, #000, rgba(15, 39, 4, 0.158));
-    width: 100%;
-    padding: 30px;
-    border-radius: 15px 15px 0px 0px;
-    transition: box-shadow .5s;
+
+.main-text2-{
+    &r{
+        display: none;
+    }
+    &nr{
+        position: relative;
+        height: 150vh;
+        width: 100vw;
+        z-index: $content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: linear-gradient(to bottom, #000,transparent);
+        grid-template-rows: repeat(6,minmax(50px, 25vh));
+    
+        & div{
+            position: relative;
+
+            & h2{
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: rgb(255, 255, 255);
+            }
+    
+            & p{
+                text-align: justify;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                color: rgb(236, 236, 236);
+            }
+        }
+        & > div:nth-child(1){
+           justify-self: flex-start;
+           background: linear-gradient(to right, rgba(15, 39, 4, 0.349),rgba(0, 0, 0, 0));
+            border-radius: 15px;
+            padding: 15px;
+            grid-column: 1/ span 1;
+            grid-row: 1/ span 3;
+            align-self: center;
+        }
+        & > div:nth-child(2){
+           justify-self: flex-end;
+           grid-column: 2/ span 1;
+            grid-row: 2/ span 2;
+        }
+        & > div:nth-child(3){
+           justify-self: flex-start;
+           grid-column: 1/ span 2;
+            grid-row: 4/ span 3;
+            background: linear-gradient(to top, #000, rgba(15, 39, 4, 0.158));
+            width: 100%;
+            padding: 30px;
+            border-radius: 15px 15px 0px 0px;
+            transition: box-shadow .5s;
+
+            &:hover{
+                box-shadow: 0px 0px 7px 0px rgb(168, 168, 168);
+            }
+        }
+    }
 }
 
-.main-text2-nr div:nth-child(3):hover{
-    box-shadow: 0px 0px 7px 0px rgb(168, 168, 168);
-}
+// .main-text2-nr div:nth-child(3):hover{
+//     box-shadow: 0px 0px 7px 0px rgb(168, 168, 168);
+// }
 
 .list{
     list-style: none;
@@ -136,57 +151,55 @@
     font-weight: 400;
     color: rgb(236, 236, 236);
     width: 85%;
-    margin: .5rem 0;
-    padding-left: 50px;
-}
-.lists{
-    color: #ffffff;
-    overflow-x: scroll;
-    font-family: 'Poppins', sans-serif;
-}
-
-.lists ul{
-    padding: 40px;
-}
-
-.lists::-webkit-scrollbar{
-    display: none;
-}
-.list li{
-    margin-bottom: 2px;
-}
-
-
-.list2{
-    color: rgb(236, 236, 236);
-    list-style:circle;
-}
-
-.list2 li{
-    font-family: 'Poppins', sans-serif;
+    padding-left: 60px;
+    & li{
+        text-align: left;
+        margin-bottom: 2px;
+    }
+    &s{
+        color: #ffffff;
+        overflow-x: scroll;
+        font-family: 'Poppins', sans-serif;
+        & ul{
+            padding: 40px;
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        & li{
+            margin-bottom: 2px;
+        }
+    }
+    &2{
+        color: rgb(236, 236, 236);
+        list-style:circle;
+        & li{
+            font-family: 'Poppins', sans-serif;
+        }
+    }
 }
 
 .aside-flotante{
     width: 350px;
     position: absolute;
-    right: 10px;
+    right: 4px;
     z-index: $menuList;
     top: 50%;
     transform: translateY(-50%);
     background: linear-gradient(to left, #000,transparent);
     border-radius: 15px;
-    padding: 15px;
     animation: show 2s 4s ease-in-out 1 both;
-}
-.aside-flotante h2,.main-text2-nr div h2{
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
+    & h2{
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
 }
 
-// planets
+// planets bootstrap modified carousel
 .carousel, .carousel-inner, .carousel-item{
     height: 100% !important;
     width: 100% !important;
@@ -205,7 +218,11 @@
 }
 
 .maxZindex{
-    z-index: 1200 !important;
+    z-index: 1199 !important;
+}
+
+.pointer-event{
+    pointer-events: all !important;
 }
 .magicContainer{
     position: absolute;

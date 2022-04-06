@@ -284,3 +284,45 @@
     }
 }
 
+// HEIGHT AND BIG WIDTH
+
+@media only screen and (max-width:1023px) and (max-device-height:560px) {
+    .second-text-main{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .main-text .title .cont-appear2 h1{
+        font-size: 4.5vw;
+    }
+    .main-text .title p{
+        font-size: 1.3vw;
+    }
+
+    .aside-flotante{
+        width: 35vw;
+    }
+
+    .aside-flotante h2{
+        font-size: 2vw;
+    }
+    .list li{
+        font-size: 1.5vw;
+    }
+
+    .second-text-main p{
+        font-size: 1.3vw;
+    }
+    // .menu--circle{
+    //     height: 20vw;
+    //     width: 20vw;
+    // }
+
+    // .menu__toggle{
+    //     height: 15vw;
+    //     width: 15vw;
+    // }
+    
+}
+

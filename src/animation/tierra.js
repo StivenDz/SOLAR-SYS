@@ -7,6 +7,7 @@ let scene;
 let camera;
 let renderer;
 const canvas = document.querySelector('.webgl');
+const buttonClose = document.querySelector('.close');
 
 // scene setup
 scene = new THREE.Scene();
@@ -86,8 +87,8 @@ pointLight.position.set(5, 3, 5);
 scene.add(pointLight);
 
 // point light helper
-const Helper = new THREE.PointLightHelper(pointLight);
-scene.add(Helper);
+// const Helper = new THREE.PointLightHelper(pointLight);
+// scene.add(Helper);
 
 // handling resizing
 window.addEventListener('resize', () => {
@@ -116,5 +117,9 @@ const animate = () => {
 const render = () => {
     renderer.render(scene, camera);
 }
+
+buttonClose.addEventListener('click',()=>{
+    controls.reset()
+})
 
 animate();

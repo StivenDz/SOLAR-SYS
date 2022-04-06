@@ -10,6 +10,13 @@ const linksNames3 = document.querySelector('.planets3');
 
 const contPlanets = document.querySelector('.planets-names');
 
+const buttonInspect = document.querySelector('.buttonSeeAndCheck');
+const buttonClose = document.querySelector('.close');
+const planetContainer = document.querySelector('.earth-Animation');
+const planet = document.querySelector('.webgl');
+
+const backAppear = document.querySelector('.backAppearJs');
+
 if(window.innerWidth <= 590){
     menu.setAttribute('ckeched',false);
     contPlanets.classList.toggle('animation');
@@ -27,6 +34,12 @@ if(window.innerWidth <= 590){
     });
 }
 
+setTimeout(()=>{
+    menu.toggleAttribute('checked');
+    contPlanets.classList.toggle('novisible');
+    contPlanets.classList.toggle('animation');
+    contPlanets.classList.toggle('animation_reverse');
+},6000);
 
 arrow1.addEventListener('click',(e)=>{
     changeLinksNames('none','flex','none');
@@ -37,6 +50,34 @@ arrow2.addEventListener('click',(e)=>{
 arrow3.addEventListener('click',(e)=>{
     changeLinksNames('none','none','flex');
 })
+
+buttonInspect.addEventListener('click', (e)=>{
+    planetContainer.classList.add('maxZindex');
+    planet.classList.add('pointer-event');
+    buttonClose.style.display = 'block';
+})
+
+let reset = false;
+
+buttonClose.addEventListener('click',()=>{
+    planetContainer.classList.toggle('maxZindex');
+    planet.classList.toggle('pointer-event');
+    buttonClose.style.display = 'none';
+    backAppear.classList.toggle('backAppearReset');
+    setTimeout(()=>{
+        backAppear.classList.toggle('backAppearRefresh');
+        reset = true;
+    },1000);
+    if(reset){
+        resetAppears();
+        reset = false;
+    }
+})
+
+const resetAppears = ()=>{
+    backAppear.classList.toggle('backAppearReset')
+    backAppear.classList.toggle('backAppearRefresh');
+}
 
 const changeLinksNames = (none1,none2,none3) =>{
     linksNames3.style.display = none1;
