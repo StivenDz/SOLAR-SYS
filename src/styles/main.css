@@ -940,17 +940,72 @@ body {
     .main-text2-nr > div:nth-child(3):hover {
       box-shadow: 0px 0px 7px 0px #a8a8a8; }
 
+.main_Earth2 .main-movements {
+  position: relative;
+  z-index: 700;
+  margin-top: 150px;
+  width: 50%; }
+  .main_Earth2 .main-movements h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+    animation: textColor 2.5s 5s ease-in-out infinite alternate both; }
+  .main_Earth2 .main-movements .list2 {
+    color: white; }
+    .main_Earth2 .main-movements .list2 li {
+      padding-left: 40px;
+      margin-top: 12px;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      color: #ececec; }
+
+.main_Earth2 .lists {
+  margin-top: 100px;
+  padding: 10px 7vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .main_Earth2 .lists h2 {
+    text-transform: uppercase;
+    animation: textColor 2.5s 5s ease-in-out infinite alternate both; }
+  .main_Earth2 .lists > ul {
+    padding: 40px;
+    width: 95%;
+    border-radius: 15px; }
+    .main_Earth2 .lists > ul div {
+      position: relative;
+      border-radius: 15px;
+      border-top: 3px solid rgba(255, 255, 255, 0.438);
+      border-left: 3px solid rgba(255, 255, 255, 0.74);
+      padding: 15px 5px 10px 25px;
+      list-style: none;
+      margin-bottom: 15px;
+      background: linear-gradient(to left, #000, transparent); }
+      .main_Earth2 .lists > ul div > li {
+        margin-bottom: 15px; }
+        .main_Earth2 .lists > ul div > li ul {
+          background: #0f0f0f;
+          border-radius: 15px; }
+          .main_Earth2 .lists > ul div > li ul li {
+            margin-bottom: 15px; }
+
 .list {
-  list-style: none;
+  list-style: disc;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   color: #ececec;
   width: 85%;
-  padding-left: 60px; }
+  padding-left: 40px; }
   .list li {
     text-align: left;
     margin-bottom: 2px; }
   .lists {
+    position: relative;
+    z-index: 700;
     color: #ffffff;
     overflow-x: scroll;
     font-family: 'Poppins', sans-serif; }
@@ -971,8 +1026,8 @@ body {
   position: absolute;
   right: 4px;
   z-index: 500;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
+  transform: translateY(-40%);
   background: linear-gradient(to left, #000, transparent);
   border-radius: 15px;
   animation: show 2s 4s ease-in-out 1 both; }
@@ -982,7 +1037,9 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
     text-align: center;
-    color: white; }
+    color: white;
+    animation: textColor 2.5s 5s ease-in-out infinite alternate both;
+    margin-bottom: 7px; }
 
 .carousel, .carousel-inner, .carousel-item {
   height: 100% !important;
