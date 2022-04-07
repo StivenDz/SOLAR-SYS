@@ -23,8 +23,19 @@
         width: 55%;
     }
 
+    .main_Earth2 .main-movements{
+        width: 80%;
+        margin: 150px auto 0;
+    }
+
     .title{
         width: 100%;
+    }
+}
+
+@media screen and (max-width:916px){
+    .main-text{
+        top: 42%;
     }
 }
 
@@ -46,7 +57,43 @@
     .aside-flotante{
         display: none;
     }
-    
+
+    .list-general-c{
+        display: block;
+        z-index: 700;
+        position: relative;
+        margin: 110px auto 120px;
+
+        & h2{
+            font-size: 3.4vw;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: white;
+            animation: textColor 2.5s 5s ease-in-out infinite alternate both;
+            margin-bottom: 20px;
+        }
+
+        & .list2{
+            list-style: none;
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            padding-left: 18vw;
+        }
+
+        @for $i from 1 through 8{
+            & .list2 li:nth-child(#{$i}){
+                width: 80%;
+                margin-bottom: 15px;
+                background: rgb(15,15,15);
+                padding: 8px;
+                border-radius: 15px;
+                font-size: 3.6vw;
+            }
+        }
+    }
     .main-text2-nr > div:nth-child(1){
         display: none;
     }
@@ -120,6 +167,10 @@
         overflow-y: scroll;
     }
 
+    .overflow{
+        top: 55%;
+    }
+
     .title{
         display: flex;
         align-items: center;
@@ -143,6 +194,14 @@
     .magic{
         font-size: 2rem;
     }
+    .main_Earth2 .lists {
+        padding: 10px 0;
+        & h2{
+            font-size: 3.6vw;
+            text-align: left;
+            padding-left: 4px;
+        }
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -155,12 +214,45 @@
     .magic{
         font-size: 2rem !important;
     }
+    .main_Earth2 .main-movements{
+        width: 95%;
+        margin-top: 70px;
+        
+        & .list2 li{
+            padding-left: 5px;
+        }
+    }
 }
 
 @media screen and (max-width:570px){
     .title .cont-appear h1{
         font-size: 2rem;
         animation: none;
+    }
+    .main_Earth2 .lists > ul  {
+        width: 100%;
+        padding: 4px;
+    }
+    .main_Earth2 .lists > ul div > li{
+        font-size: 3.5vw;
+    }
+    
+    .list-general-c{
+        & .list2{
+            padding-left: 7vw;
+        }
+        & h2{
+            font-size: 4vw;
+        }
+    } 
+}
+
+@media screen and (min-device-height: 510px) and (max-width:508px) {
+    .overflow{
+        top: 65%;
+    } 
+    .main_Earth2 .main-movements{
+        margin-top: 110px;
     }
 }
 
@@ -180,6 +272,12 @@
     }
     .list{
         text-align: left;
+    }
+
+    .main_Earth2 .main-movements{
+        & .list2 li{
+            font-size: 14px;
+        }
     }
 
 }
@@ -212,16 +310,19 @@
 @media  screen and (max-width:390px) {
     .main-text{
         margin-top: 15px;
+        & .title p{
+            font-size: 12px;
+        }
+    }
+    .main_Earth2 .main-movements{
+        & .list2 li{
+            font-size: 3.5vw;
+        }
     }
 
     .overflow{
-        height: 80vh;
-        box-shadow: 1px 4px 7px 0px rgba(255, 255, 255, 0.432);
+        height: 100vh;
         border-radius: 5px;
-        transition: box-shadow 1s;
-        &:hover{
-            box-shadow: 1px 4px 7px 0px rgba(255, 255, 255, 0.904);
-        }
     }
     .overflow2{
         height: 70vh;

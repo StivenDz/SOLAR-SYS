@@ -35,10 +35,12 @@ if(window.innerWidth <= 590){
 }
 
 setTimeout(()=>{
-    menu.toggleAttribute('checked');
-    contPlanets.classList.toggle('novisible');
-    contPlanets.classList.toggle('animation');
-    contPlanets.classList.toggle('animation_reverse');
+    if(window.innerWidth > 590){
+        menu.toggleAttribute('checked');
+        contPlanets.classList.toggle('novisible');
+        contPlanets.classList.toggle('animation');
+        contPlanets.classList.toggle('animation_reverse');
+    }
 },6000);
 
 arrow1.addEventListener('click',(e)=>{
