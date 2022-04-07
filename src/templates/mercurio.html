@@ -158,12 +158,17 @@
       <!-- back appear -->
       <picture class="backAppear"></picture>
       <!-- Earth Planet Background Image -->
-      <picture class="wrapperMercury1">
+      <!-- <picture class="wrapperMercury1">
         <div class="bgMercury1 backgroundAppear">
         </div>
-      </picture>
+      </picture> -->
+      <div class="earth-Animation">
+        <button class="close"><span></span></button>
+        <canvas class="webgl">
+        </canvas>
+      </div>
       <!-- main-text -->
-      <aside class="aside-flotante colorM3">
+      <aside class="aside-flotante"><!-- colorM3 -->
         <h2> GENERAL CHARACTERISTICS</h2>
         <ul class="list">
           <li><b>Category:</b> Rocky Planet</li>
@@ -181,9 +186,11 @@
           <div class="cont-appear2"><h1 data-text="The Earth">MERCURY</h1></div>
             <p>Planet Earth is the third planet orbiting the Sun <b>(star of type G2V, who is in his youth according to stellar evolution)</b>, is a metallic terrestrial planet, classified in this category along with <b>Mercury, Venus and Mars</b> due to the composition of their nuclei.<br> The planet Earth is characterized by being the densest in the entire Solar System, by having the most intense magnetic field and the highest surface gravity of the rocky planets, since it has the highest rotation speed.</p>
             <p class="second-text-responsive">Planet Earth does not have rings. It has a natural satellite called "Selene" or more popularly known as Luna, it orbits only 384,400 km away from the surface, it is the fourth largest natural satellite in the Solar System. This contributes to the stabilization of the tilt of the Earth, as well as tidal changes.</p>
+            <button class="buttonSeeAndCheck2 buttonResponsive second-text-responsive">INSPECT</button>
           </div>
       </section>
       <section class="second-text-main">
+        <button class="buttonSeeAndCheck">INSPECT</button>
         <p>Planet Earth does not have rings. It has a natural satellite called "Selene" or more popularly known as Luna, it orbits only 384,400 km away from the surface, it is the fourth largest natural satellite in the Solar System. This contributes to the stabilization of the tilt of the Earth, as well as tidal changes.</p>
       </section>
     </section>
@@ -321,5 +328,7 @@
   </footer>
   <!-- End Footer -->
   <script src="../animation/nav.js"></script>
+  <script type="module" src="../animation/mercurio.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

@@ -31,6 +31,22 @@
     .title{
         width: 100%;
     }
+
+    .list-general{
+        & h2{
+            font-size: 2.3vw;
+        }
+
+        & .list2{
+            width: 70%;
+        }
+
+        @for $i from 1 through 9{
+            & .list2 li:nth-child(#{$i}){
+                font-size: 1.5vw;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:916px){
@@ -58,42 +74,26 @@
         display: none;
     }
 
-    .list-general-c{
-        display: block;
-        z-index: 700;
-        position: relative;
-        margin: 110px auto 120px;
-
+    .list-general{
         & h2{
-            font-size: 3.4vw;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            color: white;
-            animation: textColor 2.5s 5s ease-in-out infinite alternate both;
-            margin-bottom: 20px;
+            font-size: 2.8vw;
         }
 
         & .list2{
-            list-style: none;
-            display: flex;
-            align-items: left;
-            flex-direction: column;
-            padding-left: 18vw;
+            width: 85%;
         }
 
-        @for $i from 1 through 8{
+        @for $i from 1 through 9{
             & .list2 li:nth-child(#{$i}){
-                width: 80%;
-                margin-bottom: 15px;
-                background: rgb(15,15,15);
-                padding: 8px;
-                border-radius: 15px;
-                font-size: 3.6vw;
+                font-size: 1.9vw;
             }
         }
+
+        &-none{
+            display: flex;
+        }
     }
+
     .main-text2-nr > div:nth-child(1){
         display: none;
     }
@@ -222,6 +222,22 @@
             padding-left: 5px;
         }
     }
+
+    .list-general{
+        & h2{
+            font-size: 3.2vw;
+        }
+
+        & .list2{
+            width: 85%;
+        }
+
+        @for $i from 1 through 9{
+            & .list2 li:nth-child(#{$i}){
+                font-size: 2.6vw;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:570px){
@@ -237,7 +253,7 @@
         font-size: 3.5vw;
     }
     
-    .list-general-c{
+    .list-general{
         & .list2{
             padding-left: 7vw;
         }
@@ -245,6 +261,23 @@
             font-size: 4vw;
         }
     } 
+
+    .list-general{
+        & h2{
+            font-size: 3.9vw;
+        }
+
+        & .list2{
+            width: 85%;
+            padding: 5px 2px 2px;
+        }
+
+        @for $i from 1 through 9{
+            & .list2 li:nth-child(#{$i}){
+                font-size: 3.5vw;
+            }
+        }
+    }
 }
 
 @media screen and (min-device-height: 510px) and (max-width:508px) {

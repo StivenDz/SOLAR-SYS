@@ -1004,8 +1004,108 @@ body {
   .list li {
     text-align: left;
     margin-bottom: 2px; }
-  .list-general-c {
-    display: none; }
+  .list-general {
+    z-index: 700;
+    position: relative;
+    margin: 110px 0 120px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .list-general h2 {
+      font-size: 1.8vw;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: white;
+      animation: textColor 2.5s 5s ease-in-out infinite alternate both;
+      margin-bottom: 20px; }
+    .list-general .list2 {
+      width: 50%;
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 18vw;
+      border-radius: 15px;
+      padding: 7px;
+      background-color: #ffffff10;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px); }
+    .list-general .list2 li:nth-child(1) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(1) {
+      background: #181818; }
+    .list-general .list2 li:nth-child(2) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(2) {
+      background: #0f0f0f; }
+    .list-general .list2 li:nth-child(3) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(3) {
+      background: #181818; }
+    .list-general .list2 li:nth-child(4) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(4) {
+      background: #0f0f0f; }
+    .list-general .list2 li:nth-child(5) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(5) {
+      background: #181818; }
+    .list-general .list2 li:nth-child(6) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(6) {
+      background: #0f0f0f; }
+    .list-general .list2 li:nth-child(7) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(7) {
+      background: #181818; }
+    .list-general .list2 li:nth-child(8) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general .list2 li:nth-child(8) {
+      background: #0f0f0f; }
+    .list-general .list2 li:nth-child(9) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 15px;
+      font-size: 1.3vw; }
+    .list-general-none {
+      display: none; }
   .lists {
     position: relative;
     z-index: 700;
@@ -1374,7 +1474,29 @@ body {
     width: 80%;
     margin: 150px auto 0; }
   .title {
-    width: 100%; } }
+    width: 100%; }
+  .list-general h2 {
+    font-size: 2.3vw; }
+  .list-general .list2 {
+    width: 70%; }
+  .list-general .list2 li:nth-child(1) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(2) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(3) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(4) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(5) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(6) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(7) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(8) {
+    font-size: 1.5vw; }
+  .list-general .list2 li:nth-child(9) {
+    font-size: 1.5vw; } }
 
 @media screen and (max-width: 916px) {
   .main-text {
@@ -1391,82 +1513,30 @@ body {
 @media screen and (max-width: 828px) {
   .aside-flotante {
     display: none; }
-  .list-general-c {
-    display: block;
-    z-index: 700;
-    position: relative;
-    margin: 110px auto 120px; }
-    .list-general-c h2 {
-      font-size: 3.4vw;
-      text-align: center;
-      text-transform: uppercase;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      color: white;
-      animation: textColor 2.5s 5s ease-in-out infinite alternate both;
-      margin-bottom: 20px; }
-    .list-general-c .list2 {
-      list-style: none;
-      display: flex;
-      align-items: left;
-      flex-direction: column;
-      padding-left: 18vw; }
-    .list-general-c .list2 li:nth-child(1) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
-    .list-general-c .list2 li:nth-child(2) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
-    .list-general-c .list2 li:nth-child(3) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
-    .list-general-c .list2 li:nth-child(4) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
-    .list-general-c .list2 li:nth-child(5) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
-    .list-general-c .list2 li:nth-child(6) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
-    .list-general-c .list2 li:nth-child(7) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
-    .list-general-c .list2 li:nth-child(8) {
-      width: 80%;
-      margin-bottom: 15px;
-      background: #0f0f0f;
-      padding: 8px;
-      border-radius: 15px;
-      font-size: 3.6vw; }
+  .list-general h2 {
+    font-size: 2.8vw; }
+  .list-general .list2 {
+    width: 85%; }
+  .list-general .list2 li:nth-child(1) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(2) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(3) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(4) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(5) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(6) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(7) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(8) {
+    font-size: 1.9vw; }
+  .list-general .list2 li:nth-child(9) {
+    font-size: 1.9vw; }
+  .list-general-none {
+    display: flex; }
   .main-text2-nr > div:nth-child(1) {
     display: none; }
   .main-text2-nr > div:nth-child(2) {
@@ -1557,7 +1627,29 @@ body {
     width: 95%;
     margin-top: 70px; }
     .main_Earth2 .main-movements .list2 li {
-      padding-left: 5px; } }
+      padding-left: 5px; }
+  .list-general h2 {
+    font-size: 3.2vw; }
+  .list-general .list2 {
+    width: 85%; }
+  .list-general .list2 li:nth-child(1) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(2) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(3) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(4) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(5) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(6) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(7) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(8) {
+    font-size: 2.6vw; }
+  .list-general .list2 li:nth-child(9) {
+    font-size: 2.6vw; } }
 
 @media screen and (max-width: 570px) {
   .title .cont-appear h1 {
@@ -1568,10 +1660,33 @@ body {
     padding: 4px; }
   .main_Earth2 .lists > ul div > li {
     font-size: 3.5vw; }
-  .list-general-c .list2 {
+  .list-general .list2 {
     padding-left: 7vw; }
-  .list-general-c h2 {
-    font-size: 4vw; } }
+  .list-general h2 {
+    font-size: 4vw; }
+  .list-general h2 {
+    font-size: 3.9vw; }
+  .list-general .list2 {
+    width: 85%;
+    padding: 5px 2px 2px; }
+  .list-general .list2 li:nth-child(1) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(2) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(3) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(4) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(5) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(6) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(7) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(8) {
+    font-size: 3.5vw; }
+  .list-general .list2 li:nth-child(9) {
+    font-size: 3.5vw; } }
 
 @media screen and (min-device-height: 510px) and (max-width: 508px) {
   .overflow {

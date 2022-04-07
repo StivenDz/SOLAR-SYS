@@ -17,6 +17,11 @@ const planetContainer = document.querySelector('.earth-Animation');
 const planet = document.querySelector('.webgl');
 
 const backAppear = document.querySelector('.backAppearJs');
+const listResponsive = document.querySelector('.list-general-none');
+
+if(window.innerWidth <= 828){
+    listResponsive.setAttribute('data-aos','fade-up');
+}
 
 if(window.innerWidth <= 590){
     menu.setAttribute('ckeched',false);
