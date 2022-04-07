@@ -11,6 +11,7 @@ const linksNames3 = document.querySelector('.planets3');
 const contPlanets = document.querySelector('.planets-names');
 
 const buttonInspect = document.querySelector('.buttonSeeAndCheck');
+const buttonInspect2 = document.querySelector('.buttonSeeAndCheck2');
 const buttonClose = document.querySelector('.close');
 const planetContainer = document.querySelector('.earth-Animation');
 const planet = document.querySelector('.webgl');
@@ -53,6 +54,12 @@ arrow3.addEventListener('click',(e)=>{
     changeLinksNames('none','none','flex');
 })
 
+buttonInspect2.addEventListener('click', (e)=>{
+    planetContainer.classList.add('maxZindex');
+    planet.classList.add('pointer-event');
+    buttonClose.style.display = 'block';
+    buttonInspect2.style.display = 'none'
+})
 buttonInspect.addEventListener('click', (e)=>{
     planetContainer.classList.add('maxZindex');
     planet.classList.add('pointer-event');
@@ -62,6 +69,7 @@ buttonInspect.addEventListener('click', (e)=>{
 let reset = false;
 
 buttonClose.addEventListener('click',()=>{
+    buttonInspect2.style.display = 'block'
     planetContainer.classList.toggle('maxZindex');
     planet.classList.toggle('pointer-event');
     buttonClose.style.display = 'none';

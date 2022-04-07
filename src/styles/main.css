@@ -1114,7 +1114,7 @@ body {
       transform: rotate(90deg);
       border-radius: 15px; }
 
-.buttonSeeAndCheck {
+.buttonSeeAndCheck, .buttonSeeAndCheck2 {
   position: relative;
   top: 0;
   left: 50%;
@@ -1132,10 +1132,15 @@ body {
   outline: 2px solid #0072ff;
   z-index: 900;
   transition: color 1s , background 1s, outline 0s; }
-  .buttonSeeAndCheck:hover {
+  .buttonSeeAndCheck:hover, .buttonSeeAndCheck2:hover {
     color: white;
     background-color: #0073ff;
     outline: 2px solid rgba(0, 115, 255, 0); }
+
+.buttonSeeAndCheck2:hover {
+  color: white;
+  background-color: #0073ff;
+  outline: 2px solid rgba(0, 115, 255, 0); }
 
 .buttonResponsive {
   margin: auto;
