@@ -58,7 +58,7 @@ buttonInspect2.addEventListener('click', (e)=>{
     planetContainer.classList.add('maxZindex');
     planet.classList.add('pointer-event');
     buttonClose.style.display = 'block';
-    buttonInspect2.style.display = 'none'
+    buttonInspect2.style.opacity = '0'
 })
 buttonInspect.addEventListener('click', (e)=>{
     planetContainer.classList.add('maxZindex');
@@ -69,7 +69,7 @@ buttonInspect.addEventListener('click', (e)=>{
 let reset = false;
 
 buttonClose.addEventListener('click',()=>{
-    buttonInspect2.style.display = 'block'
+    buttonInspect2.style.opacity = '1'
     planetContainer.classList.toggle('maxZindex');
     planet.classList.toggle('pointer-event');
     buttonClose.style.display = 'none';
