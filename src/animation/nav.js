@@ -58,7 +58,11 @@ buttonInspect2.addEventListener('click', (e)=>{
     planetContainer.classList.add('maxZindex');
     planet.classList.add('pointer-event');
     buttonClose.style.display = 'block';
-    buttonInspect2.style.opacity = '0'
+    buttonInspect2.style.opacity = '0';
+    scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 })
 buttonInspect.addEventListener('click', (e)=>{
     planetContainer.classList.add('maxZindex');
