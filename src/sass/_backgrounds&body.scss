@@ -198,11 +198,13 @@ $images:(
 .whitoutBack{
     background: none !important;
 }
+
+.wrapperBackSize{
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
 .wrapper{
-    &BackSize{
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
 
     &Index{
         text-align: center;
@@ -292,8 +294,8 @@ $images:(
 .bg{
     @include backHWP(100%, absolute );
     background: map-get($images , onion ) 50% 50%;
-    @extend .wrapperBackSize;
     animation: bright 7s infinite alternate ease-in-out;
+    @extend .wrapperBackSize;
 
     &SizePos{
         @include backHWP(100%, absolute );
