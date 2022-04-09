@@ -544,17 +544,17 @@ body {
   height: 100%;
   position: relative;
   background: url(../images/Earth3.jpg);
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-repeat: no-repeat; }
 
 .main_Mercury2 {
   width: 100%;
   height: 100%;
   position: relative;
   background: url(../images/Mercurio3.jpg);
-  background-position: center;
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat; }
 
 .earth-Animation {

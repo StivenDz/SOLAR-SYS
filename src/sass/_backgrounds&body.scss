@@ -83,28 +83,22 @@ $images:(
     }
     &Earth2{
         @include backHWP(100%, relative );
-        // background: url(../images/Earth3.jpg);
-        // background: map-get($images , earth3 );
-        // background-position: top;
-        // background-repeat: no-repeat;
-        // background-size: cover
         background: linear-gradient(to top, rgba(18, 4, 145, 0.253),transparent);
     }
 
     &Earthback{
         @include backHWP(100%, relative );
         background: map-get($images , earth3 );
+        background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover
+        background-repeat: no-repeat
     }
     &Mercury2{
         @include backHWP(100%, relative );
-        // background: url(../images/Mercurio3.jpg);
         background: map-get($images, mercury3 );
-        background-position: center;
         background-size:contain;
-        background-repeat: no-repeat;
+        background-position: center;
+        background-repeat: no-repeat
     }
 }
 
