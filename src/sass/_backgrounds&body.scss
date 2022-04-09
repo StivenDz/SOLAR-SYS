@@ -24,6 +24,27 @@ body{
 }
 
 
+@mixin backHWP($height,$pos) {
+    width: 100%;
+    height: $height;
+    position: $pos;
+}
+
+$images:(
+    earth3: url(../images/Earth3.jpg),
+    mercury3:url(../images/Mercurio3.jpg),
+    mercury2:url(../images/Mercurio2.jpg) 50% 50%,
+    venus2:url(../images/Venus2.jpg),
+    venus:url(../images/Venus.jpg),
+    saturno:url(../images/saturno.jpg),
+    saturno2:url(../images/saturno2.jpg),
+    marte:url(../images/marte.jpg),
+    marte2:url(../images/marte2.jpg),
+    jupiter:url(../images/jupiter.jpg),
+    jupiter3:url(../images/jupiter3.jpg),
+    onion:url(../images/onion.png)
+);
+
 .body_{
     &Planets {
         padding: 0;
@@ -51,31 +72,24 @@ body{
         margin-bottom: 100px;
     }
     &index{
-        width: 100%;
-        height: 100vh;
-        position: relative;
+        @include backHWP(100vh, relative )
     }
     
     &Earth{
-        width: 100%;
-        height: 100vh;
+        @include backHWP(100vh, relative );
         min-height: 515px;
-        position: relative;
     }
     &Earth2{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: url(../images/Earth3.jpg);
+        @include backHWP(100%, relative );
+        // background: url(../images/Earth3.jpg);
+        background: map-get($images , earth3 );
         background-position: top;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperBackSize;
     }
     &Mercury2{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: url(../images/Mercurio3.jpg);
+        @include backHWP(100%, relative );
+        // background: url(../images/Mercurio3.jpg);
+        background: map-get($images, mercury3 );
         background-position: center;
         background-size:contain;
         background-repeat: no-repeat;
@@ -92,9 +106,13 @@ body{
         height: 100vh !important;
         position: relative;
         pointer-events: none;
+        cursor:grab;
+
+        &:active{
+            cursor: grabbing;
+        }
     }
 }
-
 
 /*  ALL BACKGROUNDS */
 
@@ -110,9 +128,7 @@ body{
 
 .back{
     &Appear{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @include backHWP(100%, absolute );
         z-index: $backAppear;
         background: #000;
         animation: backAppear 7s 2s both;
@@ -125,35 +141,28 @@ body{
     }
     &{
         border-radius: 6px;
-        position: absolute;
         z-index: 400;
-        width: 100%;
         left: 0;
         bottom: 0;
-        height: 100%;
+        @include backHWP(100%, absolute );
         background: linear-gradient(to top, rgba(0, 0, 0, 0.801),transparent);
     }
     &3{
         border-radius: 6px;
-        position: absolute;
         z-index: 400;
-        width: 100%;
-        height: 100vh;
+        @include backHWP(100vh, absolute );
         background: linear-gradient(to bottom, transparent,rgb(0, 0, 0));
     }
     &2{
         border-radius: 6px;
-        position: absolute;
+        @include backHWP(100%, absolute);
         width: 101%;
-        height: 100%;
         left: 0;
         bottom: 0;
         background: linear-gradient(to top, rgb(0, 0, 0),rgba(0, 0, 0, 0.185));
     }
     &Pro{
-        height: 100%;
-        width: 100%;
-        position: absolute;
+        @include backHWP(100%, absolute );
         z-index: 1400;
         animation: showPage 3s 2s 1 both;
         pointer-events: none;
@@ -190,168 +199,117 @@ body{
     background: none !important;
 }
 .wrapper{
+    &BackSize{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     &Index{
-        position: absolute;
         text-align: center;
-        width: 100%;
-        height: 100%;
+        @include backHWP(100%, absolute );
         z-index: $zwrapper;
         opacity: .5;
     }
     &Earth1{
-        position: relative;
-        text-align: center;
-        width: 100%;
+        @extend .wrapperEarth2;
         height: 100vh;
-        z-index: $zwrapper;
+        position: relative;
         // background: url(../images/Earth3.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperBackSize;
         // animation: bright3Earth 7s infinite alternate ease-in-out;
     }
     &Earth2{
-        position: absolute;
         text-align: center;
-        width: 100%;
-        height: 100%;
+        @include backHWP(100%, absolute );
         z-index: $zwrapper;
     }
     
     &Mercury1{
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/Mercurio2.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, mercury2);
+        @extend .wrapperBackSize;
         animation: bright2 7s infinite alternate ease-in-out;
     }
     
     &Mercury2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/Mercurio3.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, mercury3) 50% 50%;
+        @extend .wrapperBackSize;
         animation: bright2 7s infinite alternate ease-in-out;
     }
     &Venus1{
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/Venus2.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, venus2) 50% 50%;
+        @extend .wrapperBackSize;
         animation: bright2 7s infinite alternate ease-in-out;
     }
     &Venus2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/Venus.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background:  map-get($images, venus) 50% 50%;
+        @extend .wrapperBackSize;
         animation: bright2 7s infinite alternate ease-in-out;
     }
     &Saturno1{
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/saturno.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, saturno) 50% 50%;
+        @extend .wrapperBackSize;
         background-position: bottom;
         animation: onlyBright 7s infinite alternate ease-in-out;
     }
     &Saturno2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/saturno2.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, saturno2) 50% 50%;
+        @extend .wrapperBackSize;
         animation: bright 7s infinite alternate ease-in-out;
     }
     &Marte1{
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/marte.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, marte) 50% 50%;
+        @extend .wrapperBackSize;
         background-position: bottom;
         animation: bright2 7s infinite alternate ease-in-out;
     }
     &Marte2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/marte2.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, marte2) 50% 50%;
+        @extend .wrapperBackSize;
         animation: bright 7s infinite alternate ease-in-out;
     }
     &Jupiter1{
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/jupiter.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, jupiter) 50% 50%;
+        @extend .wrapperBackSize;
         background-position: bottom;
         animation: bright2 7s infinite alternate ease-in-out;
     }
     &Jupiter2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: $zwrapper;
-        background: url(../images/jupiter3.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .wrapperEarth2;
+        background: map-get($images, jupiter3) 50% 50%;
+        @extend .wrapperBackSize;
         background-position: left;
     }
 }
 .bg{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(../images/onion.png) 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include backHWP(100%, absolute );
+    background: map-get($images , onion ) 50% 50%;
+    @extend .wrapperBackSize;
     animation: bright 7s infinite alternate ease-in-out;
+
+    &SizePos{
+        @include backHWP(100%, absolute );
+    }
     &Earth1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
     }
     &Earthx{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         z-index: 5;
         background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.404));
     }
 
     &Earth1x{
-        position: absolute;
-        width: 100%;
+        @extend .bgSizePos;
         height: 40%;
         bottom: 0;
         z-index: 150;
@@ -359,80 +317,57 @@ body{
     }
     
     &Earth2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url(../images/Earth3.jpg) 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .bgSizePos;
+        background: map-get($images , earth3 ) 50% 50%;
+        @extend .wrapperBackSize;
         animation: bright2 7s infinite alternate ease-in-out;
     }
     
     &Mercury1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to top, #000, rgba(148, 114, 4, 0.171));
     }
     
     &Mercury2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0));
     }
     
     &Venus1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to top, #000, rgba(148, 114, 4, 0.171));
     }
     
     &Venus2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.993), rgba(0, 0, 0, 0));
     }
     &Saturno1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to top, #000, rgba(6, 4, 148, 0.171));
     }
     
     &Saturno2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0));
     }
     &Marte1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to top, #000, rgba(6, 4, 148, 0.171));
     }
     
     &Marte2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0));
     }
     
     &Jupiter1{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to top, #000, rgba(6, 4, 148, 0.171));
     }
     
     &Jupiter2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .bgSizePos;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0));
         
     }

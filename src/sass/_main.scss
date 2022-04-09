@@ -1,5 +1,19 @@
 /*  MAIN TEXT  */
 
+
+@mixin letters($question,$fw,$fs,$color) {
+    @if $question == 'transform'{
+        text-transform: uppercase;
+    }
+    font-family: 'Poppins', sans-serif;
+    font-weight: $fw;
+    @if $fs != 'none'{
+        font-size: $fs;
+    }
+    color: $color;
+}
+
+
 .main-text{
     position: absolute;
     z-index: $content;
@@ -27,19 +41,14 @@
         }
         
         & .cont-appear h1,& .cont-appear2 h1,.cont-appear2 h1{
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
+            @include letters('transform',700 , 3rem, rgb(255,255,255));
             animation: textColor 2.5s 5s ease-in-out infinite alternate both;
-            font-size: 3rem;
             position: relative;
         }
         
         & p{
             text-align: justify;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            color: rgb(236, 236, 236);
+            @include letters('none',400 , 'none', rgb(236, 236, 236));
             width: 85%;
             margin: 1rem 0;
             animation: show 2s 2s ease-in-out 1 both;
@@ -48,11 +57,7 @@
     
 }
 .cont-appear2 h2{
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
+    @include letters('transform',700 , 1.2rem, rgb(255,255,255));
 }
 
 .second-text{
@@ -67,11 +72,8 @@
         left: 50%;
         transform: translate(-50%);
         z-index: $content;
-        color: #fff;
         text-align: justify;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        color: rgb(255, 255, 255);
+        @include letters('none',400 , 'none', rgb(255,255,255));
         margin: 1rem 0;
         animation: show 2s 2s ease-in-out 1 both;
     }
@@ -96,18 +98,12 @@
             position: relative;
 
             & h2{
-                text-transform: uppercase;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 700;
-                font-size: 1.2rem;
-                color: rgb(255, 255, 255);
+                @include letters('transform',700 , 1.2rem, rgb(255,255,255));
             }
     
             & p{
                 text-align: justify;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 400;
-                color: rgb(236, 236, 236);
+                @include letters('transform',400 , 'none', rgb(236, 236, 236));
             }
         }
         & > div:nth-child(1){
@@ -121,12 +117,12 @@
         }
         & > div:nth-child(2){
            justify-self: flex-end;
-           grid-column: 2/ span 1;
+            grid-column: 2/ span 1;
             grid-row: 2/ span 2;
         }
         & > div:nth-child(3){
            justify-self: flex-start;
-           grid-column: 1/ span 2;
+            grid-column: 1/ span 2;
             grid-row: 4/ span 3;
             background: linear-gradient(to top, #000, rgba(15, 39, 4, 0.158));
             width: 100%;
@@ -153,11 +149,7 @@
 
     & h2{
         text-align: center;
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 1.2rem;
-        color: rgb(255, 255, 255);
+        @include letters('transform',700 , 1.2rem, rgb(255,255,255));
         animation: textColor 2.5s 5s ease-in-out infinite alternate both;
     }
 
@@ -168,9 +160,8 @@
             padding-left: 40px;
             margin-top: 12px;
             text-align: justify;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
             color: rgb(236, 236, 236);
+            @include letters('none',400 , 'none', rgb(236, 236, 236));
         }
     }
 }
@@ -197,8 +188,6 @@
             padding: 15px 5px 10px 25px;
             list-style: none;
             margin-bottom: 15px;
-            // backdrop-filter: blur(12px);
-            // -webkit-backdrop-filter: blur(12px);
             background: linear-gradient(to left, #000,transparent);
             & > li{
                 margin-bottom: 15px;
@@ -217,9 +206,7 @@
 
 .list{
     list-style:disc;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: rgb(236, 236, 236);
+    @include letters('none',400 , 'none', rgb(236, 236, 236));
     width: 85%;
     padding-left: 40px;
     & li{
@@ -237,12 +224,8 @@
         flex-direction: column;
 
         & h2{
-            font-size: 1.8vw;
             text-align: center;
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            color: white;
+            @include letters('transform',700 , 1.8vw, rgb(255,255,255));
             animation: textColor 2.5s 5s ease-in-out infinite alternate both;
             margin-bottom: 20px;
         }
@@ -332,7 +315,7 @@
     }
 }
 
-// planets bootstrap modified carousel
+// planets.html bootstrap modified carousel
 @each $i in carousel,carousel-inner,carousel-item{
     .#{$i}{
         height: 100% !important;
@@ -347,8 +330,6 @@
         }
     }
 }
-
-
 
 .p-planets,.h2-planetsName{
     position: relative;
