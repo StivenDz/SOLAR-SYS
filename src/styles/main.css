@@ -18,6 +18,14 @@
   100% {
     transform: translate(0px); } }
 
+@keyframes move {
+  0% {
+    background-position: top; }
+  50% {
+    background-position: bottom; }
+  100% {
+    background-position: top; } }
+
 @keyframes backAppear {
   0% {
     background: #000; }
@@ -131,7 +139,21 @@
   height: 243.33333333333334px;
   z-index: 1300;
   pointer-events: none; }
-  .planets-names .planets1, .planets-names .planets2, .planets-names .planets3 {
+  .planets-names .planets1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ffffff;
+    height: 100%;
+    width: 100%; }
+  .planets-names .planets2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ffffff;
+    height: 100%;
+    width: 100%; }
+  .planets-names .planets3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -519,6 +541,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
+.main_Mercury2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/Mercurio3.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
 .earth-Animation {
   position: relative;
   z-index: 100; }
@@ -650,7 +681,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 100;
-  background: url(../images/Mercurio.jpg) 50% 50%;
+  background: url(../images/Mercurio3.jpg) 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   animation: bright2 7s infinite alternate ease-in-out; }
@@ -1144,14 +1175,21 @@ body {
     animation: textColor 2.5s 5s ease-in-out infinite alternate both;
     margin-bottom: 7px; }
 
-.carousel, .carousel-inner, .carousel-item {
+.carousel {
   height: 100% !important;
   width: 100% !important; }
 
-.carousel-item img {
-  object-fit: cover !important;
-  width: 100% !important;
-  height: 100% !important; }
+.carousel-inner {
+  height: 100% !important;
+  width: 100% !important; }
+
+.carousel-item {
+  height: 100% !important;
+  width: 100% !important; }
+  .carousel-item img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important; }
 
 .p-planets, .h2-planetsName {
   position: relative;

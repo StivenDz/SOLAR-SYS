@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/main.css">
     <script src="https://kit.fontawesome.com/53d40d2367.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../images/Icons/favicon-32x32.png" type="image/x-icon">
     <title>SOLAR SYS</title>
 </head>
 <body class="body_mercury">
-
   <!-- button go home -->
-  <a href="/SOLAR-SYS/" class="btn position-button"><i class="fas fa-home"></i></a>
+  <a href="/SOLAR-SYS" class="btn position-button"><i class="fas fa-home"></i></a>
   <!-- End button go home -->
 
   <!-- circle menu -->
@@ -156,35 +156,34 @@
     <!-- first main section 100vh -->
     <section class="main_Earth">
       <!-- back appear -->
-      <picture class="backAppear"></picture>
-      <!-- Earth Planet Background Image -->
-      <!-- <picture class="wrapperMercury1">
-        <div class="bgMercury1 backgroundAppear">
-        </div>
-      </picture> -->
+      <picture class="backAppear backAppearJs"></picture>
+      <!-- back linear #000 to transparent 30% -->
+      <div class="bgEarth1x"></div>
+      <!-- Earth Planet Background animation -->
       <div class="earth-Animation">
         <button class="close"><span></span></button>
         <canvas class="webgl">
         </canvas>
       </div>
       <!-- main-text -->
-      <aside class="aside-flotante"><!-- colorM3 -->
+      <aside class="aside-flotante whitoutBack">
         <h2> GENERAL CHARACTERISTICS</h2>
         <ul class="list">
           <li><b>Category:</b> Rocky Planet</li>
           <li><b>Star:</b> Sun</li>
-          <li><b>Distance to its star:</b> 149,598,262 km (1 AU)</li>
-          <li><b>Diameter:</b> 12,756 km</li>
-          <li><b>Average orbital speed:</b> 29.8 km/s</li>
-          <li><b>Gravity:</b> 9.8m/s2</li>
-          <li><b>Density:</b> 5,513 Kg/m3</li>
-          <li><b>Mass:</b> 5.97x10^24 Kg</li>
+          <li><b>Distance to its star:</b> 57,909,227 km</li>
+          <li><b>Diameter:</b> 4,879.4 km</li>
+          <li><b>Average orbital speed:</b> 47.36194 km/s</li>
+          <li><b>Gravity:</b> 3.7 m/s²</li>
+          <li><b>Density:</b> 	5,43 g/cm³</li>
+          <li><b>Mass:</b> 3,302×1023 kg <br>
+            0,055 Earths</li>
         </ul>
       </aside>
-      <section class="main-text overflow2">
+      <section class="main-text overflow">
         <div class="title">
-          <div class="cont-appear2"><h1 data-text="The Earth">MERCURY</h1></div>
-            <p>Planet Earth is the third planet orbiting the Sun <b>(star of type G2V, who is in his youth according to stellar evolution)</b>, is a metallic terrestrial planet, classified in this category along with <b>Mercury, Venus and Mars</b> due to the composition of their nuclei.<br> The planet Earth is characterized by being the densest in the entire Solar System, by having the most intense magnetic field and the highest surface gravity of the rocky planets, since it has the highest rotation speed.</p>
+          <div class="cont-appear2"><h1>MERCURY</h1></div>
+            <p>Mercury is the planet in the solar system closest to the Sun and the smallest. It is part of the so-called inner planets and lacks natural satellites like Venus. Very little was known about its surface until the Mariner 10 planetary probe was sent and observations were made with radar and radio telescopes. It was later studied by NASA's MESSENGER probe and currently the European Space Agency (ESA) spacecraft called BepiColombo, launched in October 2018, is in flight heading to Mercury where it will arrive in 2025 and is expected to contribute new knowledge about the origin and composition of the planet, as well as its geology and magnetic field.</p>
             <p class="second-text-responsive">Planet Earth does not have rings. It has a natural satellite called "Selene" or more popularly known as Luna, it orbits only 384,400 km away from the surface, it is the fourth largest natural satellite in the Solar System. This contributes to the stabilization of the tilt of the Earth, as well as tidal changes.</p>
             <button class="buttonSeeAndCheck2 buttonResponsive second-text-responsive">INSPECT</button>
           </div>
@@ -193,142 +192,116 @@
         <button class="buttonSeeAndCheck">INSPECT</button>
         <p>Planet Earth does not have rings. It has a natural satellite called "Selene" or more popularly known as Luna, it orbits only 384,400 km away from the surface, it is the fourth largest natural satellite in the Solar System. This contributes to the stabilization of the tilt of the Earth, as well as tidal changes.</p>
       </section>
+      <!-- end main text -->
     </section>
-    <!-- end firt main section 100vh -->
-    
-    <!-- second main section 150vh -->
-    <section class="main_Earth2 background">
-      <picture class="wrapperMercury2">
-        <div class="bgMercury2">
+    <!-- End first main section 100vh -->
+    <!-- second main section 100% -->
+    <section class="main_Earth2 main_Mercury2">
+        <div class="bgEarth1">
         </div>
-      </picture>
-      
-      <section class="main-text2-nr">
-        <div class="colorM1">
-          <h2>Most Abundant Elements</h2>
-           <ul class="list">
-             <li>- iron <b>(32.1%)</b></li>
-             <li>- oxygen <b>(30.1%)</b></li>
-             <li>- silicon <b>(15.1%)</b></li>
-             <li>- magnesium <b>(13.9%)</b></li>
-             <li>- sulfur <b>(2.9%)</b></li>
-             <li>- nickel <b>(1.8%)</b></li>
-             <li>- calcium <b>(1.5%)</b></li>
-             <li>- aluminum <b>(1.4%)</b></li>
-           </ul>
-           <p>leaving 1.2% for the rest of the elements.</p>
-        </div>
-        <div>
+        <div class="main-movements" data-aos="fade-up">
           <h2>Main Movements</h2>
           <ul class="list2">
-            <li><b>Rotation.</b> A rotating movement on its own axis, which intermittently exposes its surface to the sun and is the cause of days and nights.9</li>
-            <li><b>Translation.</b> This is the displacement of the planet along its solar orbit, describing more or less an ellipse as a path. Every time we celebrate a year, it marks one more revolution of the planet around the Sun</li>
+            <li><b>- Rotation.</b> A rotating movement on its own axis, which intermittently exposes its surface to the sun and is the cause of days and nights.9</li>
+            <li><b>- Translation.</b> This is the displacement of the planet along its solar orbit, describing more or less an ellipse as a path. Every time we celebrate a year, it marks one more revolution of the planet around the Sun</li>
           </ul>
         </div>
-        <div class="lists colorM2">
+
+        <div class="list-general list-general-none">
+          <h2> GENERAL CHARACTERISTICS</h2>
+          <ul class="list2">
+            <li><b>Category:</b> Rocky Planet</li>
+            <li><b>Star:</b> Sun</li>
+            <li><b>Distance to its star:</b> 149,598,262 km (1 AU)</li>
+            <li><b>Diameter:</b> 12,756 km</li>
+            <li><b>Average orbital speed:</b> 29.8 km/s</li>
+            <li><b>Gravity:</b> 9.8m/s2</li>
+            <li><b>Density:</b> 5,513 Kg/m3</li>
+            <li><b>Mass:</b> 5.97x10^24 Kg</li>
+          </ul>
+        </div>
+
+        <div class="list-general" data-aos="fade-up">
+          <h2>Most Abundant Elements</h2>
+           <ul class="list2">
+             <li>iron <b>(32.1%)</b></li>
+             <li>oxygen <b>(30.1%)</b></li>
+             <li>silicon <b>(15.1%)</b></li>
+             <li>magnesium <b>(13.9%)</b></li>
+             <li>sulfur <b>(2.9%)</b></li>
+             <li>nickel <b>(1.8%)</b></li>
+             <li>calcium <b>(1.5%)</b></li>
+             <li>aluminum <b>(1.4%)</b></li>
+             <li>leaving 1.2% for the rest of the elements.</li>
+           </ul>
+        </div>
+
+        <div class="lists">
           <h2>Planet Earth is made up of concentric layers of matter that extend toward the core from the surface. These layers are:</h2>
           <ul>
-            <li>
-              lithosphere. It extends from the surface (0 kilometers deep) to about 60 kilometers inwards, being the least dense layer of all and the only one that we can visit with concrete physical means. That's where the tectonic plates are, for example. The lithosphere is further divided into two distinct layers.
-              <ul>
-                <li>Cortex. It goes from 0 to 35 kilometers deep, being the layer where life is located, consisting mainly of solid silicates.</li>
-                <li>Upper mantle. It ranges from 35 to 60 kilometers deep, and is composed mostly of peridotite rocks, extremely basic, from which the basalts could come.</li>
-              </ul>
-            </li>
-            <li>
-              Earth's mantle. The mantle of the Earth goes from 35 kilometers deep, to 2890, that is, to the outer part of the core. It is the widest layer of the internal structure of the Earth, rich in silicates, magnesium and iron, all in a semi-solid state and of variable viscosity. Within the mantle is the inner mantle and also the asthenosphere.
-              <ul>
-                <li>Asthenosphere. A low-viscosity layer that comprises the upper part of the Earth's mantle, made up of silicate materials in a solid state and semi-molten or partially molten, depending on its proximity to the boiling magma. The tectonic plates move above the asthenosphere. This layer goes from 100 to 700 kilometers deep.</li>
-              </ul>
-            </li>
-            <li>
-              Nucleus. The terrestrial core is the "heart" of the planet, and is composed mostly of ferromagnetic metals (iron and nickel), divided into two stages:
-              <ul>
-                <li>External nucleus. Stretching from 2,890 kilometers to 5,100 kilometers deep, this liquid layer of highly viscous metal rests on the inner core and comprises mostly iron, with traces of lighter elements.</li>
-                <li>Inner core. The true center of the Earth is a core of solid metal, which rotates with a slightly higher angular speed than the rest of the planet, and which is responsible for the generation of its magnetosphere. It has a radius of approximately 1,255 kilometers and its composition is believed to be 70% iron and 30% nickel, along with minute portions of other heavy metals such as iridium, lead, and titanium.</li>
-              </ul>
-            </li>
+            <div data-aos="fade-right">
+              <li>
+                - <b> lithosphere</b>. It extends from the surface (0 kilometers deep) to about 60 kilometers inwards, being the least dense layer of all and the only one that we can visit with concrete physical means. That's where the tectonic plates are, for example. The lithosphere is further divided into two distinct layers. <br><br>
+                <ul>
+                  <li>Cortex. It goes from 0 to 35 kilometers deep, being the layer where life is located, consisting mainly of solid silicates.</li>
+                  <li>Upper mantle. It ranges from 35 to 60 kilometers deep, and is composed mostly of peridotite rocks, extremely basic, from which the basalts could come.</li>
+                </ul>
+              </li>
+            </div>
+            <div data-aos="fade-right">
+              <li>
+                - <b> Earth's mantle</b>. The mantle of the Earth goes from 35 kilometers deep, to 2890, that is, to the outer part of the core. It is the widest layer of the internal structure of the Earth, rich in silicates, magnesium and iron, all in a semi-solid state and of variable viscosity. Within the mantle is the inner mantle and also the asthenosphere.<br><br>
+                <ul>
+                  <li>Asthenosphere. A low-viscosity layer that comprises the upper part of the Earth's mantle, made up of silicate materials in a solid state and semi-molten or partially molten, depending on its proximity to the boiling magma. The tectonic plates move above the asthenosphere. This layer goes from 100 to 700 kilometers deep.</li>
+                </ul>
+              </li>
+            </div>
+            <div data-aos="fade-right">
+              <li>
+                - <b> Nucleus</b>. The terrestrial core is the "heart" of the planet, and is composed mostly of ferromagnetic metals (iron and nickel), divided into two stages:<br><br>
+                <ul>
+                  <li>External nucleus. Stretching from 2,890 kilometers to 5,100 kilometers deep, this liquid layer of highly viscous metal rests on the inner core and comprises mostly iron, with traces of lighter elements.</li>
+                  <li>Inner core. The true center of the Earth is a core of solid metal, which rotates with a slightly higher angular speed than the rest of the planet, and which is responsible for the generation of its magnetosphere. It has a radius of approximately 1,255 kilometers and its composition is believed to be 70% iron and 30% nickel, along with minute portions of other heavy metals such as iridium, lead, and titanium.</li>
+                </ul>
+              </li>
+            </div>
           </ul>
         </div>
-        <!-- responsive section -->
-        <section class="main-text2-r mercury-color">
-          <section id="first-section">
-            <div class="general-c">
-              <h2> GENERAL CHARACTERISTICS</h2>
-              <ul class="list listInd">
-                <li><b>Category:</b> Rocky Planet</li>
-                <li><b>Star:</b> Sun</li>
-                <li><b>Distance to its star:</b> 149,598,262 km (1 AU)</li>
-                <li><b>Diameter:</b> 12,756 km</li>
-                <li><b>Average orbital speed:</b> 29.8 km/s</li>
-                <li><b>Gravity:</b> 9.8m/s2</li>
-                <li><b>Density:</b> 5,513 Kg/m3</li>
-                <li><b>Mass:</b> 5.97x10^24 Kg</li>
-              </ul>
-            </div>
-            <a class="btn-sections" href="#second-section"></a>
-          </section>
-          <section id="second-section">
-            <div class="general-c">
-              <h2>Most Abundant Elements</h2>
-               <ul class="list">
-                 <li>- iron <b>(32.1%)</b></li>
-                 <li>- oxygen <b>(30.1%)</b></li>
-                 <li>- silicon <b>(15.1%)</b></li>
-                 <li>- magnesium <b>(13.9%)</b></li>
-                 <li>- sulfur <b>(2.9%)</b></li>
-                 <li>- nickel <b>(1.8%)</b></li>
-                 <li>- calcium <b>(1.5%)</b></li>
-                 <li>- aluminum <b>(1.4%)</b></li>
-               </ul>
-               <p>leaving 1.2% for the rest of the elements.</p>
-            </div>
-            <a class="btn-sections" href="#third-section"></a>
-          </section>
-          <section id="third-section">
-            <div class="general-c">
-              <h2>Main Movements</h2>
-              <ul class="list2">
-                <li><b>Rotation.</b> A rotating movement on its own axis, which intermittently exposes its surface to the sun and is the cause of days and nights.9</li>
-                <li><b>Translation.</b> This is the displacement of the planet along its solar orbit, describing more or less an ellipse as a path. Every time we celebrate a year, it marks one more revolution of the planet around the Sun</li>
-              </ul>
-            </div>
-            <a class="btn-sections" href="#first-section"></a>
-          </section>
-        </section>
-        <!-- end second main resposive section 100vh -->
-      </section>
-    </section>
-    <!-- end second main section 150vh -->
 
-    <a href="./venus.html" class="btn next">NEXT PLANET</a>
+        <a href="./venus.html" class="btn next">NEXT PLANET</a>
+        <!-- Footer -->
+        <footer class="footer-Earth">
+          <div class="wrapper">
+            <a href = "mailto:stivendiazh@gmail.com"target="__BLANK" class="iconsocial email">
+                <div class="tooltip">Email</div>
+              <span><i class="fa-solid fa-envelope"></i></span>
+            </a>
+            <a href="https://www.linkedin.com/in/stiven-diaz-3892aa224" target="__BLANK"class="iconsocial linkdein">
+              <div class="tooltip" translate="no">linkdein</div>
+              <span><i class="fab fa-linkedin"></i></span>
+            </a>
+            <a href="https://instagram.com/stiven_dz" target="__BLANK" class="iconsocial instagram">
+              <div class="tooltip">Instagram</div>
+              <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a href="https://github.com/StivenDz" target="__BLANK" class="iconsocial github">
+              <div class="tooltip">Github</div>
+              <span><i class="fab fa-github"></i></span>
+            </a>
+          </div>
+        </footer>
+      <!-- End Footer -->
+    </section>
+    <!--End second main section 100% -->
   </main>
   <!-- End all content text and backgrounds -->
-
-  <!-- Footer -->
-  <footer class="footer-Earth">
-    <div class="wrapper">
-      <a href = "mailto:stivendiazh@gmail.com"target="__BLANK" class="iconsocial email">
-          <div class="tooltip">Email</div>
-         <span><i class="fa-solid fa-envelope"></i></span>
-      </a>
-      <a href="https://www.linkedin.com/in/stiven-diaz-3892aa224" target="__BLANK"class="iconsocial linkdein">
-         <div class="tooltip" translate="no">linkdein</div>
-         <span><i class="fab fa-linkedin"></i></span>
-      </a>
-      <a href="https://instagram.com/stiven_dz" target="__BLANK" class="iconsocial instagram">
-         <div class="tooltip">Instagram</div>
-         <span><i class="fab fa-instagram"></i></span>
-      </a>
-      <a href="https://github.com/StivenDz" target="__BLANK" class="iconsocial github">
-         <div class="tooltip">Github</div>
-         <span><i class="fab fa-github"></i></span>
-      </a>
-    </div>
-  </footer>
-  <!-- End Footer -->
+  <script src="../animation/three.min.js"></script>
+  <script src="../animation/stars.js"></script>
   <script src="../animation/nav.js"></script>
   <script type="module" src="../animation/mercurio.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

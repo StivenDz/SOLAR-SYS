@@ -71,6 +71,16 @@ body{
         background-size: cover;
         background-repeat: no-repeat;
     }
+    &Mercury2{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: url(../images/Mercurio3.jpg);
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+        
+    }
 }
 
 
@@ -153,7 +163,6 @@ body{
     }
 }
 
-
 .color{
     &S1{
         background: none !important;
@@ -225,7 +234,7 @@ body{
         width: 100%;
         height: 100%;
         z-index: $zwrapper;
-        background: url(../images/Mercurio.jpg) 50% 50%;
+        background: url(../images/Mercurio3.jpg) 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
         animation: bright2 7s infinite alternate ease-in-out;

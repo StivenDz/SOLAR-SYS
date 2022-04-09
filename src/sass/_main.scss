@@ -333,16 +333,21 @@
 }
 
 // planets bootstrap modified carousel
-.carousel, .carousel-inner, .carousel-item{
-    height: 100% !important;
-    width: 100% !important;
+@each $i in carousel,carousel-inner,carousel-item{
+    .#{$i}{
+        height: 100% !important;
+        width: 100% !important;
+
+        @if $i == carousel-item{
+            & img{
+                object-fit: cover !important;
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+    }
 }
 
-.carousel-item img{
-    object-fit: cover !important;
-    width: 100% !important;
-    height: 100% !important;
-}
 
 
 .p-planets,.h2-planetsName{
@@ -381,4 +386,3 @@
 .br-index-res{
     display: none;
 }
-

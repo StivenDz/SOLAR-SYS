@@ -14,13 +14,15 @@
     z-index: 1300;
     pointer-events: none;
 
-    & .planets1, & .planets2, & .planets3{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        color: #ffffff;
-        height: 100%;
-        width: 100%;
+    @for $i from 1 through 3{
+        & .planets#{$i}{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: #ffffff;
+            height: 100%;
+            width: 100%;
+        }
     }
 
     & div{

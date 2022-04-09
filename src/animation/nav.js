@@ -73,6 +73,10 @@ buttonInspect.addEventListener('click', (e)=>{
     planetContainer.classList.add('maxZindex');
     planet.classList.add('pointer-event');
     buttonClose.style.display = 'block';
+    scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 })
 
 let reset = false;
