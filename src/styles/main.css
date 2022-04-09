@@ -524,7 +524,8 @@ body {
 .main_index {
   width: 100%;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  min-height: 535px; }
 
 .main_Earth {
   width: 100%;

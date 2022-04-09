@@ -72,7 +72,8 @@ $images:(
         margin-bottom: 100px;
     }
     &index{
-        @include backHWP(100vh, relative )
+        @include backHWP(100vh, relative );
+        min-height: 535px
     }
     
     &Earth{
