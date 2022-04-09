@@ -538,7 +538,9 @@ body {
   height: 100%;
   position: relative;
   background: url(../images/Earth3.jpg);
-  background-position: top; }
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .main_Mercury2 {
   width: 100%;
@@ -644,7 +646,7 @@ body {
 .whitoutBack {
   background: none !important; }
 
-.wrapperBackSize, .main_Earth2, .wrapperEarth1, .wrapperMercury1, .wrapperMercury2, .wrapperVenus1, .wrapperVenus2, .wrapperSaturno1, .wrapperSaturno2, .wrapperMarte1, .wrapperMarte2, .wrapperJupiter1, .wrapperJupiter2, .bg, .bgEarth2 {
+.wrapperBackSize, .wrapperEarth1, .wrapperMercury1, .wrapperMercury2, .wrapperVenus1, .wrapperVenus2, .wrapperSaturno1, .wrapperSaturno2, .wrapperMarte1, .wrapperMarte2, .wrapperJupiter1, .wrapperJupiter2, .bg, .bgEarth2 {
   background-size: cover !important;
   background-repeat: no-repeat !important; }
 

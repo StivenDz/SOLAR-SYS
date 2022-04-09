@@ -85,7 +85,8 @@ $images:(
         // background: url(../images/Earth3.jpg);
         background: map-get($images , earth3 );
         background-position: top;
-        @extend .wrapperBackSize;
+        background-repeat: no-repeat;
+        background-size: cover
     }
     &Mercury2{
         @include backHWP(100%, relative );
@@ -94,7 +95,6 @@ $images:(
         background-position: center;
         background-size:contain;
         background-repeat: no-repeat;
-        
     }
 }
 
