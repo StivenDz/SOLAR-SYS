@@ -31,6 +31,7 @@ body{
 }
 
 $images:(
+    earth2: url(../images/Earth2.jpg),
     earth3: url(../images/Earth3.jpg),
     mercury3:url(../images/Mercurio3.jpg),
     mercury2:url(../images/Mercurio2.jpg) 50% 50%,
@@ -83,8 +84,17 @@ $images:(
     &Earth2{
         @include backHWP(100%, relative );
         // background: url(../images/Earth3.jpg);
+        // background: map-get($images , earth3 );
+        // background-position: top;
+        // background-repeat: no-repeat;
+        // background-size: cover
+        background: linear-gradient(to top, rgba(18, 4, 145, 0.253),transparent);
+    }
+
+    &Earthback{
+        @include backHWP(100%, relative );
         background: map-get($images , earth3 );
-        background-position: top;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover
     }

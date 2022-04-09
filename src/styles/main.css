@@ -537,8 +537,14 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  background: linear-gradient(to top, rgba(18, 4, 145, 0.253), transparent); }
+
+.main_Earthback {
+  width: 100%;
+  height: 100%;
+  position: relative;
   background: url(../images/Earth3.jpg);
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
