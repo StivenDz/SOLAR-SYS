@@ -10,20 +10,6 @@ const linksNames3 = document.querySelector('.planets3');
 
 const contPlanets = document.querySelector('.planets-names');
 
-const buttonInspect = document.querySelector('.buttonSeeAndCheck');
-const buttonInspect2 = document.querySelector('.buttonSeeAndCheck2');
-const buttonClose = document.querySelector('.close');
-const planetContainer = document.querySelector('.earth-Animation');
-const planet = document.querySelector('.webgl');
-
-const backAppear = document.querySelector('.backAppearJs');
-const listResponsive = document.querySelector('.list-general-none');
-let showMenu = false;
-
-if(window.innerWidth <= 828){
-    listResponsive.setAttribute('data-aos','fade-up');
-}
-
 if(window.innerWidth <= 590){
     menu.setAttribute('ckeched',false);
     contPlanets.classList.toggle('animation');
@@ -59,49 +45,6 @@ arrow2.addEventListener('click',(e)=>{
 arrow3.addEventListener('click',(e)=>{
     changeLinksNames('none','none','flex');
 })
-
-buttonInspect2.addEventListener('click', (e)=>{
-    planetContainer.classList.add('maxZindex');
-    planet.classList.add('pointer-event');
-    buttonClose.style.display = 'block';
-    buttonInspect2.style.opacity = '0';
-    scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-})
-buttonInspect.addEventListener('click', (e)=>{
-    planetContainer.classList.add('maxZindex');
-    planet.classList.add('pointer-event');
-    buttonClose.style.display = 'block';
-    scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-})
-
-let reset = false;
-
-buttonClose.addEventListener('click',()=>{
-    buttonInspect2.style.opacity = '1'
-    planetContainer.classList.toggle('maxZindex');
-    planet.classList.toggle('pointer-event');
-    buttonClose.style.display = 'none';
-    backAppear.classList.toggle('backAppearReset');
-    setTimeout(()=>{
-        backAppear.classList.toggle('backAppearRefresh');
-        reset = true;
-    },1000);
-    if(reset){
-        resetAppears();
-        reset = false;
-    }
-})
-
-const resetAppears = ()=>{
-    backAppear.classList.toggle('backAppearReset')
-    backAppear.classList.toggle('backAppearRefresh');
-}
 
 const changeLinksNames = (none1,none2,none3) =>{
     linksNames3.style.display = none1;
