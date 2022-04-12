@@ -563,6 +563,16 @@ body {
   background-position: left;
   background-repeat: no-repeat; }
 
+.main_Venusback {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/Venus.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(1.5); }
+
 .main_Mercury2 {
   width: 100%;
   height: 100%;
@@ -697,7 +707,9 @@ body {
 
 .wrapperVenus1 {
   background: url(../images/Venus2.jpg) 50% 50%;
-  animation: bright2 7s infinite alternate ease-in-out; }
+  animation: bright2 7s infinite alternate ease-in-out;
+  opacity: .4;
+  filter: brightness(2); }
 
 .wrapperVenus2 {
   background: url(../images/Venus.jpg) 50% 50%;
