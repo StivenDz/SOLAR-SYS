@@ -70,6 +70,13 @@
         
     }
 }
+@keyframes boxshad {
+    0%{
+        box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0); 
+    }100%{
+        box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.151);
+    }
+}
 
 @keyframes bright {
     0%{
