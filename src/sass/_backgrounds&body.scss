@@ -79,6 +79,7 @@ $images:(
     
     &Earth{
         @include backHWP(100vh, relative );
+        min-height: 530px
     }
     &Earth2{
         @include backHWP(100%, relative );
