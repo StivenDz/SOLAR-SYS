@@ -70,6 +70,64 @@
 }
 
 @media screen and (max-width: 828px){
+    
+}
+
+@media only screen and (max-width: 790px){
+    .close-tables{
+        left: 5%;
+        padding: 15px;
+        top: 5%;
+        & span{
+            height: 5px;
+            width: 20px;
+            &::after{
+                content: '';
+                height: 5px;
+                width: 20px;
+            }
+        }
+    }
+
+    .tables{
+        padding-top:100px;
+
+        & h2{
+            font-size: 4vw;
+        }
+    }
+
+    .listx{
+        width: 90vw;
+        padding: 7px;
+
+        @for $i from 1 through 26{
+            & li:nth-child(#{$i}){
+                width: 100%;
+                margin-bottom: 5px;
+                padding: 8px;
+                border-radius: 15px;
+            }
+        
+            @if $i % 2 == 0{
+                & li:nth-child(#{$i}){
+                    background: rgb(0, 0, 0);
+                }
+            }@else{
+                & li:nth-child(#{$i}){
+                    background: rgb(15, 15, 15);
+                    outline: 1px solid #2c2c2c5e;
+                }
+            }
+        }
+    }
+    .overflow,.overflow2{
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        overflow-y: scroll;
+    }
     .aside-flotante{
         display: none;
     }
@@ -156,16 +214,6 @@
         font-size: 1.5rem !important;
         color: rgb(255, 255, 255);
     }
-}
-
-@media only screen and (max-width: 790px){
-    .overflow,.overflow2{
-        width: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        overflow-y: scroll;
-    }
 
     .overflow{
         top: 55%;
@@ -242,6 +290,11 @@
 }
 
 @media screen and (max-width:570px){
+    .close-tables{
+        padding: 10px;
+        top: 5%;
+    }
+
     .title .cont-appear h1{
         font-size: 2rem;
         animation: none;
@@ -304,6 +357,16 @@
 }
 
 @media screen and (max-width:469px){
+    .tables{
+        & h2{
+            font-size: 4.2vw;
+            text-align: center;
+        }
+    }
+
+    .listx li{
+        font-size: 3vw;
+    }
     .magic{
         font-size: 1.5rem !important;
     }
