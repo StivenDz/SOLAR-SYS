@@ -51,6 +51,7 @@
             @include letters('none',400 , 'none', rgb(236, 236, 236));
             width: 85%;
             margin: 1rem 0;
+            font-size: 1.3vw;
             animation: show 2s 2s ease-in-out 1 both;
         }
     }
@@ -66,9 +67,10 @@
     }
     
     &-main{
-        width: 90%;
+        width: 98%;
         position: absolute;
         bottom: 0;
+        font-size: 1.3vw;
         left: 50%;
         transform: translate(-50%);
         z-index: $content;
@@ -204,6 +206,34 @@
     }
 }
 
+.tables{
+    padding: 40px;
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1199;
+    top: 0;
+    background: rgba(15, 15, 15, 0.585);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    flex-direction: column;
+    overflow: auto;
+    align-items: center;
+    transition: opacity 1s;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    & h2{
+        text-align: left;
+        @include letters('transform',700 , 2vw, rgb(255,255,255));
+        animation: textColor 2.5s 5s ease-in-out infinite alternate both;
+        margin-bottom: 7px;
+    }
+}
+
 .list{
     // list-style:disc;
     list-style:none;
@@ -234,6 +264,35 @@
         }
     }
 
+    &x{
+        list-style:none;
+        @include letters('none',400 , 'none', rgb(236, 236, 236));
+        width: 60vw;
+        border-radius: 15px;
+        padding: 7px;
+        background-color: #ffffff10;
+
+        @for $i from 1 through 26{
+            & li:nth-child(#{$i}){
+                width: 100%;
+                margin-bottom: 5px;
+                padding: 8px;
+                border-radius: 15px;
+            }
+        
+            @if $i % 2 == 0{
+                & li:nth-child(#{$i}){
+                    background: rgb(0, 0, 0);
+                }
+            }@else{
+                & li:nth-child(#{$i}){
+                    background: rgb(15, 15, 15);
+                    outline: 1px solid #2c2c2c5e;
+                }
+            }
+        }
+    }
+
     // & li{
     //     text-align: left;
     //     margin-bottom: 2px;
@@ -256,35 +315,35 @@
         }
 
         & .list2{
-            width: 50%;
-            list-style: none;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             padding-left: 18vw;
+            list-style:none;
+            @include letters('none',400 , 'none', rgb(236, 236, 236));
+            width: 60%;
             border-radius: 15px;
             padding: 7px;
             background-color: #ffffff10;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
 
-        @for $i from 1 through 9{
-            & .list2 li:nth-child(#{$i}){
-                width: 100%;
-                margin-bottom: 15px;
-                padding: 8px;
-                border-radius: 15px;
-                font-size: 1.3vw;
-            }
-            @if $i != 9{
+            @for $i from 1 through 8{
+                & li:nth-child(#{$i}){
+                    width: 100%;
+                    margin-bottom: 5px;
+                    padding: 8px;
+                    border-radius: 15px;
+                    font-size: 1.3vw;
+                    padding-left: 20px;
+                }
+               
                 @if $i % 2 == 0{
-                    & .list2 li:nth-child(#{$i}){
-                        background: rgb(15,15,15);
+                    & li:nth-child(#{$i}){
+                        background: rgb(0, 0, 0);
                     }
                 }@else{
-                    & .list2 li:nth-child(#{$i}){
-                        background: rgb(24, 24, 24);
+                    & li:nth-child(#{$i}){
+                        background: rgb(15, 15, 15);
+                        outline: 1px solid #2c2c2c5e;
                     }
                 }
             }
@@ -329,12 +388,8 @@
     border-radius: 15px;
     animation: show 2s 4s ease-in-out 1 both;
     & h2{
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 1.2rem;
+        @include letters('transform',700 , 1.2rem, rgb(255,255,255));
         text-align: left;
-        color: rgb(255, 255, 255);
         animation: textColor 2.5s 5s ease-in-out infinite alternate both;
         margin-bottom: 7px;
     }

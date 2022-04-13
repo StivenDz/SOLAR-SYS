@@ -1,5 +1,5 @@
 
-.earth-Animation .close{
+.earth-Animation .close,.close-tables{
     display: none;
     position: absolute;
     left: 75%;
@@ -26,6 +26,46 @@
             background: #fff;
             transform: rotate(90deg);
             border-radius: 15px;
+        }
+    }
+}
+.close-tables{
+    display: block;
+    position: absolute;
+    left: 85%;
+    top: 10%;
+    background: rgb(255, 255, 255);
+    transition: background 1s;
+
+    &:hover{
+        background: #000000;
+    }
+
+    &:hover > span{
+        background: rgb(255, 0, 0);
+        &::after{
+            background: rgb(255, 0, 0);
+        }
+    }
+
+    
+    & span{
+        display: block;
+        height: 5px;
+        width: 25px;
+        background: rgb(0, 0, 0);
+        transform: rotate(45deg);
+        border-radius: 15px;
+        transition: background 1s;
+        &::after{
+            content: '';
+            display: block;
+            height: 5px;
+            width: 25px;
+            background: rgb(0, 0, 0);
+            transform: rotate(90deg);
+            border-radius: 15px;
+            transition: background 1s;
         }
     }
 }
@@ -68,6 +108,24 @@
     margin-bottom: 10px;
     transform: none;
     left: 0;
+}
+
+.btn-aside{
+    padding: .5rem 1.2rem;
+    border: none;
+    border-radius: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgba(0, 115, 255, 0.377);
+    color: white;
+    transition: color 1s , background 1s, outline 0s;
+    &:hover{
+        color: rgb(0, 114, 255);
+        background: transparent;
+        outline: 2px solid rgba(0, 115, 255, 0.377);
+    }
 }
 
 .btn{
