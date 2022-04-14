@@ -6,6 +6,9 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth; }
 
+button, a {
+  cursor: pointer; }
+
 @keyframes showNames {
   0% {
     transform: translate(0px); }
@@ -520,9 +523,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.body_venus, .body_saturno, .body_mercury, .body_earth, .body_mars, .body_jupiter {
+.body_venus, .body_saturno, .body_mercury, .body_earth, .body_mars, .body_jupiter, .body_urano, .body_neptuno, .body_pluton {
   height: 100%;
   background: #000000; }
+
+.jupiterAnimation {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  pointer-events: none; }
 
 .main_Planets {
   margin-bottom: 100px; }
@@ -563,11 +572,56 @@ body {
   background-position: left;
   background-repeat: no-repeat; }
 
+.main_Marsback {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/marte2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.main_Jupiterback {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/jupiter.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+.main_Saturnback {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/saturno2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 .main_Venusback {
   width: 100%;
   height: 100%;
   position: relative;
   background: url(../images/Venus.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.main_Uranoback {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/Urano2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.main_Neptuneback {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/neptune3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -673,7 +727,7 @@ body {
 .whitoutBack {
   background: none !important; }
 
-.wrapperBackSize, .wrapperEarth1, .wrapperMercury1, .wrapperMercury2, .wrapperVenus1, .wrapperVenus2, .wrapperSaturno1, .wrapperSaturno2, .wrapperMarte1, .wrapperMarte2, .wrapperJupiter1, .wrapperJupiter2, .bg, .bgEarth2 {
+.wrapperBackSize, .wrapperEarth1, .wrapperMercury1, .wrapperMercury2, .wrapperVenus1, .wrapperVenus2, .wrapperSaturno1, .wrapperSaturno2, .wrapperSaturno3, .wrapperMarte1, .wrapperMarte2, .wrapperJupiter1, .wrapperJupiter2, .wrapperUrano1, .wrapperNeptune1, .wrapperPluton1, .bg, .bgEarth2 {
   background-size: cover !important;
   background-repeat: no-repeat !important; }
 
@@ -689,7 +743,7 @@ body {
   height: 100vh;
   position: relative; }
 
-.wrapperEarth2, .wrapperEarth1, .wrapperMercury1, .wrapperMercury2, .wrapperVenus1, .wrapperVenus2, .wrapperSaturno1, .wrapperSaturno2, .wrapperMarte1, .wrapperMarte2, .wrapperJupiter1, .wrapperJupiter2 {
+.wrapperEarth2, .wrapperEarth1, .wrapperMercury1, .wrapperMercury2, .wrapperVenus1, .wrapperVenus2, .wrapperSaturno1, .wrapperSaturno2, .wrapperSaturno3, .wrapperMarte1, .wrapperMarte2, .wrapperJupiter1, .wrapperJupiter2, .wrapperUrano1, .wrapperNeptune1, .wrapperPluton1 {
   text-align: center;
   width: 100%;
   height: 100%;
@@ -721,12 +775,18 @@ body {
 
 .wrapperSaturno2 {
   background: url(../images/saturno2.jpg) 50% 50%;
-  animation: bright 7s infinite alternate ease-in-out; }
+  animation: onlyBright 7s infinite alternate ease-in-out; }
+
+.wrapperSaturno3 {
+  background: url(../images/saturno3.jpg) 50% 50%;
+  animation: onlyBright 7s infinite alternate ease-in-out; }
 
 .wrapperMarte1 {
   background: url(../images/marte.jpg) 50% 50%;
   background-position: bottom;
-  animation: bright2 7s infinite alternate ease-in-out; }
+  animation: bright2 7s infinite alternate ease-in-out;
+  opacity: .5;
+  filter: brightness(2); }
 
 .wrapperMarte2 {
   background: url(../images/marte2.jpg) 50% 50%;
@@ -740,6 +800,22 @@ body {
 .wrapperJupiter2 {
   background: url(../images/jupiter3.jpg) 50% 50%;
   background-position: left; }
+
+.wrapperUrano1 {
+  background: url(../images/Urano.jpg) 50% 50%;
+  background-position: center;
+  opacity: .8; }
+
+.wrapperNeptune1 {
+  background: url(../images/neptune1.jpg) 50% 50%;
+  background-position: center;
+  opacity: .6;
+  filter: brightness(1.5); }
+
+.wrapperPluton1 {
+  background: url(../images/pluton.jpg) 50% 50%;
+  background-position: center;
+  opacity: .8; }
 
 .bg {
   width: 100%;

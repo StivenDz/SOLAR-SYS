@@ -39,10 +39,17 @@ $images:(
     venus:url(../images/Venus.jpg),
     saturno:url(../images/saturno.jpg),
     saturno2:url(../images/saturno2.jpg),
+    saturno3:url(../images/saturno3.jpg),
     marte:url(../images/marte.jpg),
     marte2:url(../images/marte2.jpg),
     jupiter:url(../images/jupiter.jpg),
     jupiter3:url(../images/jupiter3.jpg),
+    urano:url(../images/Urano.jpg),
+    urano2:url(../images/Urano2.jpg),
+    urano3:url(../images/Urano3.jpg),
+    neptune1:url(../images/neptune1.jpg),
+    neptune3:url(../images/neptune3.jpg),
+    pluton1:url(../images/pluton.jpg),
     onion:url(../images/onion.png)
 );
 
@@ -62,10 +69,17 @@ $images:(
         background-size: cover;
         background-repeat: no-repeat;
     }
-    &venus, &saturno , &mercury ,&earth,&mars,&jupiter{
+    &venus, &saturno , &mercury ,&earth,&mars,&jupiter, &urano, &neptuno, &pluton{
         height: 100%;
         background: #000000;
     }
+}
+
+.jupiterAnimation{
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute;
+    pointer-events: none;
 }
 
 .main_{
@@ -101,14 +115,49 @@ $images:(
         background-repeat: no-repeat
     }
 
+    &Marsback{
+        @include backHWP(100%, relative );
+        background: map-get($images , marte2 );
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &Jupiterback{
+        @include backHWP(100%, relative );
+        background: map-get($images , jupiter );
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    &Saturnback{
+        @include backHWP(100%, relative );
+        background: map-get($images , saturno2 );
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     &Venusback{
         @include backHWP(100%, relative );
         background: map-get($images , venus );
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        // filter: brightness(1.5);
-        // -webkit-filter: brightness(1.5);
+    }
+    &Uranoback{
+        @include backHWP(100%, relative );
+        background: map-get($images , urano2 );
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &Neptuneback{
+        @include backHWP(100%, relative );
+        background: map-get($images , neptune3 );
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     &Mercury2{
         @include backHWP(100%, relative );
@@ -283,7 +332,13 @@ $images:(
         @extend .wrapperEarth2;
         background: map-get($images, saturno2) 50% 50%;
         @extend .wrapperBackSize;
-        animation: bright 7s infinite alternate ease-in-out;
+        animation: onlyBright 7s infinite alternate ease-in-out;
+    }
+    &Saturno3{
+        @extend .wrapperEarth2;
+        background: map-get($images, saturno3) 50% 50%;
+        @extend .wrapperBackSize;
+        animation: onlyBright 7s infinite alternate ease-in-out;
     }
     &Marte1{
         @extend .wrapperEarth2;
@@ -291,6 +346,8 @@ $images:(
         @extend .wrapperBackSize;
         background-position: bottom;
         animation: bright2 7s infinite alternate ease-in-out;
+        opacity: .5;
+        filter: brightness(2)
     }
     &Marte2{
         @extend .wrapperEarth2;
@@ -310,6 +367,28 @@ $images:(
         background: map-get($images, jupiter3) 50% 50%;
         @extend .wrapperBackSize;
         background-position: left;
+    }
+    &Urano1{
+        @extend .wrapperEarth2;
+        background: map-get($images, urano) 50% 50%;
+        @extend .wrapperBackSize;
+        background-position: center;
+        opacity: .8;
+    }
+    &Neptune1{
+        @extend .wrapperEarth2;
+        background: map-get($images, neptune1) 50% 50%;
+        @extend .wrapperBackSize;
+        background-position: center;
+        opacity: .6;
+        filter: brightness(1.5) 
+    }
+    &Pluton1{
+        @extend .wrapperEarth2;
+        background: map-get($images, pluton1) 50% 50%;
+        @extend .wrapperBackSize;
+        background-position: center;
+        opacity: .8;
     }
 }
 .bg{

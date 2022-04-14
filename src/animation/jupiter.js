@@ -7,7 +7,6 @@ let scene;
 let camera;
 let renderer;
 const canvas = document.querySelector('.webgl');
-const buttonClose = document.querySelector('.close');
 
 // scene setup
 scene = new THREE.Scene();
@@ -19,7 +18,7 @@ const near = 0.1;
 const far = 1000;
 
 camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 1.7;
+camera.position.z = 1.5;
 scene.add(camera);
 
 // renderer setup
@@ -42,9 +41,9 @@ const earthGeometry = new THREE.SphereGeometry(0.6, 32, 32);
 const earthMaterial = new THREE.MeshPhongMaterial({
     roughness: 1,
     metalness: 0,
-    map: THREE.ImageUtils.loadTexture('../texture/marcury.png'),
-    bumpMap: THREE.ImageUtils.loadTexture('../texture/earthbum.jpg'),
-    bumpScale: 0.3
+    map: THREE.ImageUtils.loadTexture('../texture/jupiter.jpg'),
+    bumpMap: THREE.ImageUtils.loadTexture('../texture/jupiter.jpg'),
+    bumpScale: 0.01
 });
 
 // earth mesh
@@ -56,7 +55,7 @@ const cloudGeometry = new THREE.SphereGeometry(0.63, 32, 32);
 
 // cloud metarial
 const cloudMetarial = new THREE.MeshPhongMaterial({
-    map: THREE.ImageUtils.loadTexture('../texture/earthClou.png'),
+    map: THREE.ImageUtils.loadTexture('../texture/jupiter.png'),
     transparent: true,
 });
 
@@ -117,9 +116,5 @@ const animate = () => {
 const render = () => {
     renderer.render(scene, camera);
 }
-
-buttonClose.addEventListener('click',()=>{
-    controls.reset()
-})
 
 animate();
