@@ -74,6 +74,15 @@
 }
 
 @media only screen and (max-width: 790px){
+    .main_{
+        &Mercuryback{
+            background-position: center;
+        }
+        &Mercuryback2{
+            background: none;
+        }
+    }
+
     .close-tables{
         left: 5%;
         padding: 15px;

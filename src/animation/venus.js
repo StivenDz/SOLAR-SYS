@@ -18,7 +18,7 @@ const near = 0.1;
 const far = 1000;
 
 camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 1.5;
+camera.position.z = 1.7;
 scene.add(camera);
 
 // renderer setup
@@ -41,9 +41,9 @@ const earthGeometry = new THREE.SphereGeometry(0.6, 32, 32);
 const earthMaterial = new THREE.MeshPhongMaterial({
     roughness: 1,
     metalness: 0,
-    map: THREE.ImageUtils.loadTexture('../texture/urano.jpg'),
-    bumpMap: THREE.ImageUtils.loadTexture('../texture/urno.jpg'),
-    bumpScale: 0.01
+    map: THREE.ImageUtils.loadTexture('../texture/venus.jpg'),
+    bumpMap: THREE.ImageUtils.loadTexture('../texture/venus.jpg'),
+    bumpScale: 0.02
 });
 
 // earth mesh
@@ -105,7 +105,7 @@ window.addEventListener('resize', () => {
 const animate = () => {
     requestAnimationFrame(animate);
     starMesh.rotation.y -= 0.002;
-    earthMesh.rotation.y -= 0.0015;
+    earthMesh.rotation.y -= 0.0008;
     cloudMesh.rotation.y -= 0.001;
     controls.update();
     render();
@@ -116,5 +116,9 @@ const animate = () => {
 const render = () => {
     renderer.render(scene, camera);
 }
+
+buttonClose.addEventListener('click',()=>{
+    controls.reset()
+})
 
 animate();

@@ -19,7 +19,7 @@ const near = 0.1;
 const far = 1000;
 
 camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 1.7;
+camera.position.z = 1.6;
 scene.add(camera);
 
 // renderer setup
@@ -42,9 +42,9 @@ const earthGeometry = new THREE.SphereGeometry(0.6, 32, 32);
 const earthMaterial = new THREE.MeshPhongMaterial({
     roughness: 1,
     metalness: 0,
-    map: THREE.ImageUtils.loadTexture('../texture/marcury.png'),
-    bumpMap: THREE.ImageUtils.loadTexture('../texture/earthbum.jpg'),
-    bumpScale: 0.3
+    map: THREE.ImageUtils.loadTexture('../texture/mercury.png'),
+    bumpMap: THREE.ImageUtils.loadTexture('../texture/mercury.png'),
+    bumpScale: 0.015
 });
 
 // earth mesh

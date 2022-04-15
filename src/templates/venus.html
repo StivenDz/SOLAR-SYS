@@ -207,13 +207,17 @@
     <main class="main_Container">
       <section class="main_Earth">
         <!-- back appear -->
-        <picture class="backAppear"></picture>
+        <picture class="backAppear backAppearJs"></picture>
         <!-- back linear #000 to transparent 30% -->
         <!-- <div class="bgEarth1x"></div> -->
         <!-- Earth Planet Background Image -->
-        <picture class="wrapperVenus1">
+        <!-- <picture class="wrapperVenus1">
           <div class="bgVenus1"></div>
-        </picture>
+        </picture> -->
+        <div class="earth-Animation">
+          <button class="close"><span></span></button>
+          <canvas class="webgl"></canvas>
+        </div>
         <!-- main-text -->
         <aside class="aside-flotante whitoutBack">
           <h2>GENERAL CHARACTERISTICS</h2>
@@ -284,9 +288,11 @@
               its atmosphere composed mainly of carbon dioxide (CO2), hydrogen
               sulfide (H2S) and nitrogen (N2).
             </p>
+            <button class="buttonSeeAndCheck2 buttonResponsive second-text-responsive">INSPECT</button>
           </div>
         </section>
         <section class="second-text-main">
+          <button class="buttonSeeAndCheck">INSPECT</button>
           <p>
             Its atmospheric pressure is 90 times higher than Earth's; it is,
             therefore, the highest atmospheric pressure of all the rocky planets
@@ -296,11 +302,11 @@
           </p>
         </section>
       </section>
-      <section class="main_Earth2 main_Mercury2">
-        <div class="bgEarth1"></div>
+      <section class="main_Earth2">
+        <!-- <div class="bgEarth1"></div> -->
         <div class="main_Venusback">
-          <div class="bgEarth1"></div>
-          <div class="bgEarth1x"></div>
+          <!-- <div class="bgEarth1"></div>
+          <div class="bgEarth1x"></div> -->
           <div class="main-movements" data-aos="fade-up">
             <h2>Main Movements</h2>
             <ul class="list2">
@@ -354,76 +360,80 @@
           </div>
         </div>
 
-        <div class="lists">
-          <h2>GENERAL FEATURES OF MERCURY</h2>
-          <ul>
-            <div data-aos="fade-right">
-              <li>
-                - <b>Mercury's atmosphere</b><br /><br />
-                <ul>
-                  <li>
-                    Mercury's atmosphere is extremely thin, which is why it is
-                    so easy for meteors and asteroids to reach the surface and
-                    hit it. Its "atmosphere" is actually an exosphere, composed
-                    mostly of oxygen, sodium, helium, hydrogen and potassium and
-                    created by the effect of atoms detached from the surface and
-                    the impact of micrometeorites. Since surface temperatures
-                    are often extreme, atoms quickly and easily escape into
-                    space.
-                  </li>
-                </ul>
-              </li>
-            </div>
-            <div data-aos="fade-right">
-              <li>
-                - <b> Mercury's surface</b><br /><br />
-                <ul>
-                  <li>
-                    The surface of Mercury, like that of the Moon, has numerous
-                    meteorite impacts ranging from a few meters to thousands of
-                    kilometers. Some of the craters are relatively recent, a few
-                    million years old, and are characterized by the presence of
-                    a central peak. It seems that the oldest craters have had a
-                    very strong erosion, possibly due to large changes in
-                    temperature, which on a normal day range between 623 K (350
-                    °C) during the day and 103 K (-170 °C) during the night.
-                    evening.
-                  </li>
-                  <li>
-                    Like the Moon, Mercury appears to have undergone a period of
-                    intense bombardment by large meteorites about 4,000,000,000
-                    (four billion) years ago. During this period of crater
-                    formation, Mercury received impacts on its entire surface,
-                    facilitated by the virtual absence of an atmosphere that
-                    could disintegrate or stop many of these rocks. During this
-                    time, Mercury was volcanically active, forming basins or
-                    depressions with lava in the interior of the planet and
-                    producing smooth plains similar to the seas or maria of the
-                    Moon; proof of this is the discovery by the MESSENGER probe
-                    of possible volcanoes.
-                  </li>
-                </ul>
-              </li>
-            </div>
-            <div data-aos="fade-right">
-              <li>
-                - <b> Magnetosphere</b><br /><br />
-                <ul>
-                  <li>
-                    The study of Mercury's interaction with the solar wind has
-                    revealed the existence of a magnetosphere around the planet.
-                    The origin of this magnetic field is not known. In 2007,
-                    very precise ground-based radar observations demonstrated a
-                    wobble of the rotational axis compatible only with a
-                    partially molten core of the planet. A partially molten core
-                    with ferromagnetic materials could be the cause of its
-                    magnetic field. <br /><br />
-                    The intensity of the magnetic field is 220 nT.
-                  </li>
-                </ul>
-              </li>
-            </div>
-          </ul>
+        <div class="main_Venusback2">
+          <div class="bgEarth1x3"></div>
+          <div class="bgEarth1x"></div>
+          <div class="lists">
+            <h2>GENERAL FEATURES OF MERCURY</h2>
+            <ul>
+              <div data-aos="fade-right">
+                <li>
+                  - <b>Mercury's atmosphere</b><br /><br />
+                  <ul>
+                    <li>
+                      Mercury's atmosphere is extremely thin, which is why it is
+                      so easy for meteors and asteroids to reach the surface and
+                      hit it. Its "atmosphere" is actually an exosphere, composed
+                      mostly of oxygen, sodium, helium, hydrogen and potassium and
+                      created by the effect of atoms detached from the surface and
+                      the impact of micrometeorites. Since surface temperatures
+                      are often extreme, atoms quickly and easily escape into
+                      space.
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div data-aos="fade-right">
+                <li>
+                  - <b> Mercury's surface</b><br /><br />
+                  <ul>
+                    <li>
+                      The surface of Mercury, like that of the Moon, has numerous
+                      meteorite impacts ranging from a few meters to thousands of
+                      kilometers. Some of the craters are relatively recent, a few
+                      million years old, and are characterized by the presence of
+                      a central peak. It seems that the oldest craters have had a
+                      very strong erosion, possibly due to large changes in
+                      temperature, which on a normal day range between 623 K (350
+                      °C) during the day and 103 K (-170 °C) during the night.
+                      evening.
+                    </li>
+                    <li>
+                      Like the Moon, Mercury appears to have undergone a period of
+                      intense bombardment by large meteorites about 4,000,000,000
+                      (four billion) years ago. During this period of crater
+                      formation, Mercury received impacts on its entire surface,
+                      facilitated by the virtual absence of an atmosphere that
+                      could disintegrate or stop many of these rocks. During this
+                      time, Mercury was volcanically active, forming basins or
+                      depressions with lava in the interior of the planet and
+                      producing smooth plains similar to the seas or maria of the
+                      Moon; proof of this is the discovery by the MESSENGER probe
+                      of possible volcanoes.
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div data-aos="fade-right">
+                <li>
+                  - <b> Magnetosphere</b><br /><br />
+                  <ul>
+                    <li>
+                      The study of Mercury's interaction with the solar wind has
+                      revealed the existence of a magnetosphere around the planet.
+                      The origin of this magnetic field is not known. In 2007,
+                      very precise ground-based radar observations demonstrated a
+                      wobble of the rotational axis compatible only with a
+                      partially molten core of the planet. A partially molten core
+                      with ferromagnetic materials could be the cause of its
+                      magnetic field. <br /><br />
+                      The intensity of the magnetic field is 220 nT.
+                    </li>
+                  </ul>
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
 
         <a href="./tierra.html" class="btn next">NEXT PLANET</a>
@@ -469,7 +479,8 @@
     </main>
   <script src="../animation/three.min.js"></script>
   <script src="../animation/stars.js"></script>
-  <script src="../animation/nav-index.js"></script>
+  <script src="../animation/nav.js"></script>
+  <script type="module" src="../animation/venus.js"></script>
   <script src="../animation/tables.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

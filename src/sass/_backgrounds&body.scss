@@ -31,15 +31,18 @@ body{
 }
 
 $images:(
+    earth: url(../images/Earth.jpg),
     earth2: url(../images/Earth2.jpg),
     earth3: url(../images/Earth3.jpg),
     mercury3:url(../images/Mercurio3.jpg),
     mercury2:url(../images/Mercurio2.jpg) 50% 50%,
+    venus3:url(../images/Venus3.jpg),
     venus2:url(../images/Venus2.jpg),
     venus:url(../images/Venus.jpg),
     saturno:url(../images/saturno.jpg),
     saturno2:url(../images/saturno2.jpg),
     saturno3:url(../images/saturno3.jpg),
+    saturno4:url(../images/saturno4.jpg),
     marte:url(../images/marte.jpg),
     marte2:url(../images/marte2.jpg),
     jupiter:url(../images/jupiter.jpg),
@@ -97,7 +100,7 @@ $images:(
     }
     &Earth2{
         @include backHWP(100%, relative );
-        background: linear-gradient(to top, rgba(18, 4, 145, 0.253),transparent);
+        // background: linear-gradient(to top, rgba(18, 4, 145, 0.253),transparent);
     }
 
     &Earthback{
@@ -107,9 +110,23 @@ $images:(
         background-position: center;
         background-repeat: no-repeat
     }
+    &Earthback2{
+        @include backHWP(100%, relative );
+        background: map-get($images , earth );
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat
+    }
     &Mercuryback{
         @include backHWP(100%, relative );
         background: map-get($images , mercury2 );
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat
+    }
+    &Mercuryback2{
+        @include backHWP(100%, relative );
+        background: map-get($images , mercury3 );
         background-size: cover;
         background-position: left;
         background-repeat: no-repeat
@@ -137,8 +154,23 @@ $images:(
         background-position: center;
         background-repeat: no-repeat;
     }
+    &Saturnback2{
+        @include backHWP(100%, relative );
+        background: map-get($images , saturno4 );
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
     &Venusback{
+        @include backHWP(100%, relative );
+        background: map-get($images , venus2 );
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+    &Venusback2{
         @include backHWP(100%, relative );
         background: map-get($images , venus );
         background-size: cover;
@@ -412,10 +444,26 @@ $images:(
 
     &Earth1x{
         @extend .bgSizePos;
-        height: 40%;
+        height: 30%;
         bottom: 0;
         z-index: 150;
         background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+        &2{
+            @extend .bgSizePos;
+            top: 0;
+            height: 12%;
+            width: 100%;
+            z-index: 150;
+            background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
+        }
+        &3{
+            @extend .bgSizePos;
+            top: 0;
+            height: 25%;
+            width: 100%;
+            z-index: 150;
+            background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
+        }
     }
     
     &Earth2{

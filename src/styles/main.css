@@ -551,8 +551,7 @@ body {
 .main_Earth2 {
   width: 100%;
   height: 100%;
-  position: relative;
-  background: linear-gradient(to top, rgba(18, 4, 145, 0.253), transparent); }
+  position: relative; }
 
 .main_Earthback {
   width: 100%;
@@ -563,11 +562,29 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
+.main_Earthback2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/Earth.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
 .main_Mercuryback {
   width: 100%;
   height: 100%;
   position: relative;
   background: url(../images/Mercurio2.jpg) 50% 50%;
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat; }
+
+.main_Mercuryback2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/Mercurio3.jpg);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat; }
@@ -599,7 +616,25 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
+.main_Saturnback2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/saturno4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 .main_Venusback {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/Venus2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.main_Venusback2 {
   width: 100%;
   height: 100%;
   position: relative;
@@ -823,7 +858,7 @@ body {
   position: absolute;
   background: url(../images/onion.png) 50% 50%;
   animation: bright 7s infinite alternate ease-in-out; }
-  .bgSizePos, .bgEarth1, .bgEarthx, .bgEarth1x, .bgEarth2, .bgMercury1, .bgMercury2, .bgVenus1, .bgVenus2, .bgSaturno1, .bgSaturno2, .bgMarte1, .bgMarte2, .bgJupiter1, .bgJupiter2 {
+  .bgSizePos, .bgEarth1, .bgEarthx, .bgEarth1x, .bgEarth1x2, .bgEarth1x3, .bgEarth2, .bgMercury1, .bgMercury2, .bgVenus1, .bgVenus2, .bgSaturno1, .bgSaturno2, .bgMarte1, .bgMarte2, .bgJupiter1, .bgJupiter2 {
     width: 100%;
     height: 100%;
     position: absolute; }
@@ -833,10 +868,22 @@ body {
     z-index: 5;
     background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0.404)); }
   .bgEarth1x {
-    height: 40%;
+    height: 30%;
     bottom: 0;
     z-index: 150;
     background: linear-gradient(to top, #000, rgba(0, 0, 0, 0)); }
+    .bgEarth1x2 {
+      top: 0;
+      height: 12%;
+      width: 100%;
+      z-index: 150;
+      background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)); }
+    .bgEarth1x3 {
+      top: 0;
+      height: 25%;
+      width: 100%;
+      z-index: 150;
+      background: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)); }
   .bgEarth2 {
     background: url(../images/Earth3.jpg) 50% 50%;
     animation: bright2 7s infinite alternate ease-in-out; }
@@ -1894,6 +1941,10 @@ body {
     color: #cdcdcd; } }
 
 @media only screen and (max-width: 790px) {
+  .main_Mercuryback {
+    background-position: center; }
+  .main_Mercuryback2 {
+    background: none; }
   .close-tables {
     left: 5%;
     padding: 15px;
