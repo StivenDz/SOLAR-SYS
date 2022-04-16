@@ -398,21 +398,25 @@
 }
 @media screen and (max-width:430px){
     .magic{
-        font-size: 1.6rem;
+        font-size: 6.2vw !important;
     }
     .p-planets{
-        text-align: left;
+        text-align: justify;
     }
 }
-@media screen and (max-width:402px){
-    .magic{
-        font-size: 1.3rem;
-    }
-}
+// @media screen and (max-width:402px){
+//     .magic{
+//         font-size: 1.3rem;
+//     }
+// }
 
 @media  screen and (max-width:395px) {
     .main-text{
         margin-top: 20px;
+    }
+
+    .p-planets{
+        font-size: 13px;
     }
 }
 
@@ -485,11 +489,11 @@
         padding: 10px;
     }
 }
-@media screen and (max-width:330px){
-    .magic{
-        font-size: 1.1rem;
-    }
-}
+// @media screen and (max-width:330px){
+//     .magic{
+//         font-size: 1.1rem;
+//     }
+// }
 
 // HEIGHT AND BIG WIDTH
 

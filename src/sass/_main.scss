@@ -381,7 +381,7 @@
     width: 350px;
     position: absolute;
     right: 4px;
-    z-index: $menuList;
+    z-index: 1100;
     top: 40%;
     transform: translateY(-40%);
     background: linear-gradient(to left, #000,transparent);

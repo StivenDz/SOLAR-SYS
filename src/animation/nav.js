@@ -18,10 +18,21 @@ const planet = document.querySelector('.webgl');
 
 const backAppear = document.querySelector('.backAppearJs');
 const listResponsive = document.querySelector('.list-general-none');
-let showMenu = false;
 
 if(window.innerWidth <= 828){
     listResponsive.setAttribute('data-aos','fade-up');
+}
+
+const ShowMenu = (showMenu)=>{
+    if(showMenu){
+        contPlanets.classList.remove('novisible');
+        contPlanets.classList.remove('animation_reverse');
+        contPlanets.classList.add('animation');
+    }else{
+        contPlanets.classList.toggle('novisible');
+        contPlanets.classList.toggle('animation');
+        contPlanets.classList.toggle('animation_reverse');
+    }
 }
 
 if(window.innerWidth <= 590){
@@ -34,6 +45,7 @@ if(window.innerWidth <= 590){
     });
 }else{
     menu.toggleAttribute('checked');
+    ShowMenu(true);
     menu.addEventListener('click',(e) =>{
         contPlanets.classList.toggle('novisible');
         contPlanets.classList.toggle('animation');
@@ -41,14 +53,14 @@ if(window.innerWidth <= 590){
     });
 }
 
+
 setTimeout(()=>{
     if(window.innerWidth > 590){
         menu.toggleAttribute('checked');
-        contPlanets.classList.toggle('novisible');
-        contPlanets.classList.toggle('animation');
-        contPlanets.classList.toggle('animation_reverse');
+        ShowMenu(false);
     }
-},6000);
+},5000)
+
 
 arrow1.addEventListener('click',(e)=>{
     changeLinksNames('none','flex','none');

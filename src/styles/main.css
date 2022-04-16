@@ -1520,7 +1520,7 @@ body {
   width: 350px;
   position: absolute;
   right: 4px;
-  z-index: 500;
+  z-index: 1100;
   top: 40%;
   transform: translateY(-40%);
   background: linear-gradient(to left, #000, transparent);
@@ -1680,6 +1680,7 @@ body {
 
 .btn-aside {
   padding: .5rem 1.2rem;
+  position: relative;
   border: none;
   border-radius: 2.5rem;
   font-family: 'Poppins', sans-serif;
@@ -1811,16 +1812,25 @@ body {
 
 /* FOOTER */
 .footer-Earth {
-  height: 20vh;
+  color: #fff;
+  height: 22vh;
   width: 100%;
   position: relative;
   z-index: 180;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #0f0f0f;
   border-radius: 50% 50% 0% 100% / 100% 100% 0% 0%;
-  border-top: 1px solid #ffffff; }
+  border-top: 3px solid #ffffff; }
+  .footer-Earth p {
+    font-family: 'Poppins', sans-serif;
+    height: 15%;
+    font-weight: 500; }
   .footer-Earth .wrapper {
     width: 100%;
-    height: 100%;
+    height: 85%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -2370,17 +2380,15 @@ body {
 
 @media screen and (max-width: 430px) {
   .magic {
-    font-size: 1.6rem; }
+    font-size: 6.2vw !important; }
   .p-planets {
-    text-align: left; } }
-
-@media screen and (max-width: 402px) {
-  .magic {
-    font-size: 1.3rem; } }
+    text-align: justify; } }
 
 @media screen and (max-width: 395px) {
   .main-text {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .p-planets {
+    font-size: 13px; } }
 
 @media screen and (max-width: 390px) {
   .main-text {
@@ -2423,10 +2431,6 @@ body {
     padding: 5px; }
   .lists ul {
     padding: 10px; } }
-
-@media screen and (max-width: 330px) {
-  .magic {
-    font-size: 1.1rem; } }
 
 @media only screen and (max-width: 1023px) and (max-device-height: 560px) {
   .second-text-main {
