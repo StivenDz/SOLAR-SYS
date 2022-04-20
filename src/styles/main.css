@@ -960,7 +960,7 @@ body {
   display: none; }
 
 .second-text-main {
-  width: 98%;
+  width: 90%;
   position: absolute;
   bottom: 0;
   font-size: 1.3vw;
@@ -1047,7 +1047,8 @@ body {
       color: #ececec;
       font-family: 'Poppins', sans-serif;
       font-weight: 400;
-      color: #ececec; }
+      color: #ececec;
+      font-size: 1.3vw; }
 
 .main_Earth2 .lists {
   margin-top: 100px;
@@ -1496,6 +1497,16 @@ body {
         padding-left: 20px; }
       .list-general .list2 li:nth-child(8) {
         background: black; }
+      .list-general .list2 li:nth-child(9) {
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 8px;
+        border-radius: 15px;
+        font-size: 1.3vw;
+        padding-left: 20px; }
+      .list-general .list2 li:nth-child(9) {
+        background: #0f0f0f;
+        outline: 1px solid #2c2c2c5e; }
     .list-general-none {
       display: none; }
   .lists {
@@ -2256,6 +2267,8 @@ body {
   .main_Earth .title p {
     color: #f8f8f8;
     font-size: 1.8vw; }
+  .main_Earth2 .main-movements .list2 li {
+    font-size: 1.8vw; }
   .title .second-text-responsive {
     display: block;
     margin-top: 20px; }
@@ -2316,6 +2329,8 @@ body {
     animation: none; }
   .main_Earth .title p {
     font-size: 2.5vw; }
+  .main_Earth2 .main-movements .list2 li {
+    font-size: 2.2vw; }
   .main_Earth2 .lists > ul {
     width: 100%;
     padding: 4px; }
@@ -2396,7 +2411,7 @@ body {
     .main-text .title p {
       font-size: 12px; }
   .main_Earth2 .main-movements .list2 li {
-    font-size: 3.5vw; }
+    font-size: 12px; }
   .overflow {
     height: 100vh;
     border-radius: 5px; }

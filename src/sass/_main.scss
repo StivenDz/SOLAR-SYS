@@ -67,7 +67,7 @@
     }
     
     &-main{
-        width: 98%;
+        width: 90%;
         position: absolute;
         bottom: 0;
         font-size: 1.3vw;
@@ -164,6 +164,7 @@
             text-align: justify;
             color: rgb(236, 236, 236);
             @include letters('none',400 , 'none', rgb(236, 236, 236));
+            font-size: 1.3vw;
         }
     }
 }
@@ -326,7 +327,7 @@
             padding: 7px;
             background-color: #ffffff10;
 
-            @for $i from 1 through 8{
+            @for $i from 1 through 9{
                 & li:nth-child(#{$i}){
                     width: 100%;
                     margin-bottom: 5px;
@@ -334,6 +335,7 @@
                     border-radius: 15px;
                     font-size: 1.3vw;
                     padding-left: 20px;
+                    
                 }
                
                 @if $i % 2 == 0{

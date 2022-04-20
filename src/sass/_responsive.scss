@@ -238,6 +238,13 @@
         color: rgb(248, 248, 248);
         font-size: 1.8vw;
     }
+    .main_Earth2 .main-movements{
+        & .list2{
+            & li{
+                font-size: 1.8vw;
+            }
+        }
+    }
     
     .title .second-text-responsive{
         display: block;
@@ -310,6 +317,13 @@
     }
     .main_Earth .title p{
         font-size: 2.5vw;
+    }
+    .main_Earth2 .main-movements{
+        & .list2{
+            & li{
+                font-size: 2.2vw;
+            }
+        }
     }
     .main_Earth2 .lists > ul  {
         width: 100%;
@@ -428,10 +442,13 @@
         }
     }
     .main_Earth2 .main-movements{
-        & .list2 li{
-            font-size: 3.5vw;
+        & .list2{
+            & li{
+                font-size: 12px;
+            }
         }
     }
+    
 
     .overflow{
         height: 100vh;
