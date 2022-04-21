@@ -11,11 +11,11 @@
         margin: 0.5rem 0;
     }
 
-    .btn,.btn-rev {
-        padding: 0.5rem 1rem;
-        margin-top: 1.7rem;
-        font-size: 0.8rem;
-    }
+    // .btn,.btn-rev {
+    //     padding: 0.5rem 1rem;
+    //     margin-top: 1.7rem;
+    //     font-size: 0.8rem;
+    // }
 }
 
 @media only screen and (max-width: 1000px){
@@ -50,9 +50,9 @@
 }
 
 @media screen and (max-width:916px){
-    .main-text{
-        top: 42%;
-    }
+    // .main-text{
+    //     top: 42%;
+    // }
 }
 
 @media only screen and (max-width: 900px){
@@ -70,6 +70,15 @@
 }
 
 @media screen and (max-width: 828px){
+    .body_Index .main_index .main-text .title{
+        p{
+            font-size: 1.4vw;
+        }
+    
+        & .cont-appear h1{
+            font-size: 4vw;
+        }
+    }
     
 }
 
@@ -273,6 +282,21 @@
     .main-text{
         width: 100%;
     }
+    .body_Index .main_index .main-text .title{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+        & .cont-appear h1{
+           text-align: center;
+           font-size: 4.2vw;
+        }
+
+        p{
+            font-size: 2vw;
+        }
+        
+    }
 }
 
 @media screen and (max-width:672px){
@@ -341,6 +365,16 @@
             font-size: 4vw;
         }
     } 
+    .body_Index .main_index .main-text .title{
+        & .cont-appear h1{
+           font-size: 5vw;
+        }
+
+        p{
+            font-size: 3vw;
+        }
+        
+    }
 
     .list-general{
         & h2{
@@ -449,7 +483,16 @@
         }
     }
     
+    .body_Index .main_index .main-text .title{
+        & .cont-appear h1{
+           font-size: 5.8vw;
+        }
 
+        p{
+            font-size: 3.5vw;
+        }
+        
+    }
     .overflow{
         height: 100vh;
         border-radius: 5px;

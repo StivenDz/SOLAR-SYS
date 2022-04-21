@@ -143,11 +143,25 @@
 //     box-shadow: 0px 0px 7px 0px rgb(168, 168, 168);
 // }
 
+.body_Index .main_index .main-text .title{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    p{
+        font-size: 1.2vw;
+    }
+
+    & .cont-appear h1{
+        font-size: 3vw;
+    }
+}
+
 .main_Earth2 .main-movements{
     position: relative;
     z-index: 700;
-    margin-top: 150px;
-    width: 50%;
+    margin: 150px auto 0;
+    width: 70%;
 
     & h2{
         text-align: center;

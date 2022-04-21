@@ -1024,11 +1024,20 @@ body {
     .main-text2-nr > div:nth-child(3):hover {
       box-shadow: 0px 0px 7px 0px #a8a8a8; }
 
+.body_Index .main_index .main-text .title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column; }
+  .body_Index .main_index .main-text .title p {
+    font-size: 1.2vw; }
+  .body_Index .main_index .main-text .title .cont-appear h1 {
+    font-size: 3vw; }
+
 .main_Earth2 .main-movements {
   position: relative;
   z-index: 700;
-  margin-top: 150px;
-  width: 50%; }
+  margin: 150px auto 0;
+  width: 70%; }
   .main_Earth2 .main-movements h2 {
     text-align: center;
     text-transform: uppercase;
@@ -1912,11 +1921,7 @@ body {
   .title p {
     width: 100%;
     font-size: 0.9rem;
-    margin: 0.5rem 0; }
-  .btn, .btn-rev, .btn-rev {
-    padding: 0.5rem 1rem;
-    margin-top: 1.7rem;
-    font-size: 0.8rem; } }
+    margin: 0.5rem 0; } }
 
 @media only screen and (max-width: 1000px) {
   .main-text {
@@ -1949,10 +1954,6 @@ body {
   .list-general .list2 li:nth-child(9) {
     font-size: 1.5vw; } }
 
-@media screen and (max-width: 916px) {
-  .main-text {
-    top: 42%; } }
-
 @media only screen and (max-width: 900px) {
   .main-text {
     width: 60%; }
@@ -1960,6 +1961,12 @@ body {
     color: white; }
   .title p {
     color: #cdcdcd; } }
+
+@media screen and (max-width: 828px) {
+  .body_Index .main_index .main-text .title p {
+    font-size: 1.4vw; }
+  .body_Index .main_index .main-text .title .cont-appear h1 {
+    font-size: 4vw; } }
 
 @media only screen and (max-width: 790px) {
   .main_Mercuryback {
@@ -2287,7 +2294,16 @@ body {
 
 @media screen and (max-width: 700px) {
   .main-text {
-    width: 100%; } }
+    width: 100%; }
+  .body_Index .main_index .main-text .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .body_Index .main_index .main-text .title .cont-appear h1 {
+      text-align: center;
+      font-size: 4.2vw; }
+    .body_Index .main_index .main-text .title p {
+      font-size: 2vw; } }
 
 @media screen and (max-width: 672px) {
   .magic {
@@ -2340,6 +2356,10 @@ body {
     padding-left: 7vw; }
   .list-general h2 {
     font-size: 4vw; }
+  .body_Index .main_index .main-text .title .cont-appear h1 {
+    font-size: 5vw; }
+  .body_Index .main_index .main-text .title p {
+    font-size: 3vw; }
   .list-general h2 {
     font-size: 3.9vw; }
   .list-general .list2 {
@@ -2412,6 +2432,10 @@ body {
       font-size: 12px; }
   .main_Earth2 .main-movements .list2 li {
     font-size: 12px; }
+  .body_Index .main_index .main-text .title .cont-appear h1 {
+    font-size: 5.8vw; }
+  .body_Index .main_index .main-text .title p {
+    font-size: 3.5vw; }
   .overflow {
     height: 100vh;
     border-radius: 5px; }
