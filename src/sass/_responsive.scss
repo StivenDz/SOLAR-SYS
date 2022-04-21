@@ -395,12 +395,14 @@
 }
 
 @media screen and (min-device-height: 510px) and (max-width:508px) {
-    .overflow{
-        top: 65%;
-    } 
     .main_Earth2 .main-movements{
         margin-top: 110px;
     }
+}
+@media screen and (min-device-height: 510px) and (max-width:390px) {
+    .overflow{
+        top: 65%;
+    } 
 }
 
 @media screen and (max-width:500px){

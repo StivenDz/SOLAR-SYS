@@ -1835,11 +1835,12 @@ body {
   color: #fff;
   height: 22vh;
   width: 100%;
+  padding-bottom: 4px;
   position: relative;
   z-index: 180;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background: #0f0f0f;
   border-radius: 50% 50% 0% 100% / 100% 100% 0% 0%;
@@ -1850,7 +1851,6 @@ body {
     font-weight: 500; }
   .footer-Earth .wrapper {
     width: 100%;
-    height: 85%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -2385,10 +2385,12 @@ body {
     font-size: 3.5vw; } }
 
 @media screen and (min-device-height: 510px) and (max-width: 508px) {
-  .overflow {
-    top: 65%; }
   .main_Earth2 .main-movements {
     margin-top: 110px; } }
+
+@media screen and (min-device-height: 510px) and (max-width: 390px) {
+  .overflow {
+    top: 65%; } }
 
 @media screen and (max-width: 500px) {
   .lists {
